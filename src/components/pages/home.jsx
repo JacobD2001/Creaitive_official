@@ -9,7 +9,7 @@ import Footer from "../footer";
 import Contact from "../contact";
 import FAQ from "../faq";
 import Services from "../services";
-import Recommend from "../recommend";
+//import Recommend from "../recommend";
 import Navbar from "../navbar";
 
 
@@ -39,9 +39,9 @@ function Home() {
       <Intro ref={introRef} servicesRef={servicesRef} contactRef={contactRef} recommendRef={recommendRef} faqRef={faqRef} />   
       <Services ref={servicesRef} />
       <Contact ref={contactRef} />
-      <Recommend ref={recommendRef} />
+      {/* <Recommend ref={recommendRef} /> */}
       <FAQ ref={faqRef} />
-      <Footer />
+      <Footer ref={recommendRef}/>
     </Container>
   );
 }

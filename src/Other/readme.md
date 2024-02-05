@@ -4,5 +4,12 @@ Libraries to install
 2. npm install styled-components
 3. npm install react-intersection-observer
 
+4. npm i -S react-simple-maps
+5. npm install @emailjs/browser
+
+//TO DO:
+1. Dostosować biznesowo services
+2. Dostosować pod odpowiedniego maila mailing service
+
 
 

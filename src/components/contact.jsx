@@ -1,7 +1,7 @@
 import React, { useRef, useState, forwardRef } from "react";
-//import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components";
-//import Map from "./Map";
+import Map from "./API_Components/Map";
 
 const Section = styled.div`
   height: 100vh;
@@ -73,57 +73,56 @@ const Right = styled.div`
   }
 `;
 
-const Contact = forwardRef((props, ref) => {
-    // const ref = useRef();
-    // const [success, setSuccess] = useState(null);
-  
-    // const handleSubmit = (e) => {
-    //   e.preventDefault();
-  
-    //   emailjs
-    //     .sendForm(
-    //       "service_g03wpak",
-    //       "template_97fpdge",
-    //       ref.current,
-    //       "VRWHO5fAEDZA2gjcC"
-    //     )
-    //     .then(
-    //       (result) => {
-    //         console.log(result.text);
-    //         setSuccess(true);
-    //       },
-    //       (error) => {
-    //         console.log(error.text);
-    //         setSuccess(false);
-    //       }
-    //     );
-    // };
-    return (
-      <Section ref={ref}>
-        <Container>
-          <Left>
-            {/* <Form ref={ref} onSubmit={handleSubmit}> */}
-            <Form>
-              <Title>Contact Us</Title>
-              <Input placeholder="Name" name="name" />
-              <Input placeholder="Email" name="email" />
-              <TextArea
-                placeholder="Write your message"
-                name="message"
-                rows={10}
-              />
-              <Button type="submit">Send</Button>
-              {/* {success &&
-                "Your message has been sent. We'll get back to you soon :)"} */}
-            </Form>
-          </Left>
-          <Right>
-            {/* <Map /> */}
-          </Right>
-        </Container>
-      </Section>
-    );
-  });
-  
-  export default Contact;
+const Contact = forwardRef((props, forwardedRef) => {
+  const formRef = useRef();
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_g03wpak",
+        "template_97fpdge",
+        formRef.current,
+        "VRWHO5fAEDZA2gjcC"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
+  };
+  return (
+    <Section ref={forwardedRef}>
+      <Container>
+        <Left>
+          <Form ref={formRef} onSubmit={handleSubmit}>
+            <Title>Contact Us</Title>
+            <Input placeholder="Name" name="name" />
+            <Input placeholder="Email" name="email" />
+            <TextArea
+              placeholder="Write your message"
+              name="message"
+              rows={10}
+            />
+            <Button type="submit">Send</Button>
+            {success &&
+              "Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce."}
+          </Form>
+        </Left>
+        <Right>
+          <Map />
+        </Right>
+      </Container>
+    </Section>
+  );
+});
+
+export default Contact;
   
