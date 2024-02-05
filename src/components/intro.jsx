@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { forwardRef } from "react";
+import styled from "styled-components";
 
-import Navbar from './navbar'
-
+import Navbar from "./navbar";
 
 //styled components
 const Section = styled.div`
@@ -121,25 +120,24 @@ const Img = styled.img`
   }
 `;
 
-
-const Intro = () => {
-    return (
-        <Section>
-        <Navbar />
-        <Container>
-          <Left>
-            <Title>Think. Make. Solve.</Title>
-            <WhatWeDo>
-              <Line src="./img/line.png" />
-              <Subtitle>What we Do</Subtitle>
-            </WhatWeDo>
-            <Desc>
-              we enjoy creating delightful, human-centered digital experiences.
-            </Desc>
-            <Button>Learn More</Button>
-          </Left>
-          <Right>
-            {/* <Canvas>
+const Intro = ({ servicesRef }) => {
+  return (
+    <Section>
+      <Navbar servicesRef={servicesRef} />
+      <Container>
+        <Left>
+          <Title>Think. Make. Solve.</Title>
+          <WhatWeDo>
+            <Line src="./img/line.png" />
+            <Subtitle>What we Do</Subtitle>
+          </WhatWeDo>
+          <Desc>
+            we enjoy creating delightful, human-centered digital experiences.
+          </Desc>
+          <Button>Learn More</Button>
+        </Left>
+        <Right>
+          {/* <Canvas>
               <Suspense fallback={null}>
                 <OrbitControls enableZoom={false} />
                 <ambientLight intensity={1} />
@@ -154,12 +152,11 @@ const Intro = () => {
                 </Sphere>
               </Suspense>
             </Canvas> */}
-            <Img src="./img/moon.png" />
-          </Right>
-        </Container>
-      </Section>
-    )
-}
+          <Img src="./img/moon.png" />
+        </Right>
+      </Container>
+    </Section>
+  );
+};
 
-export default Intro
-
+export default Intro;

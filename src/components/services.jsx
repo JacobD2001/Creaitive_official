@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import styled from 'styled-components';
 
 const data = [
@@ -91,10 +91,10 @@ const data = [
     flex: 1;
   `;
   
-  const Services = () => {
+  const Services = forwardRef((props, ref) => {
      const [work, setWork] = useState("Web Design");
     return (
-      <Section>
+      <Section ref={ref}>
         <Container>
           <Left>
             <List>
@@ -117,7 +117,7 @@ const data = [
         </Container>
       </Section>
     );
-  };
+  });
   
   export default Services;
   

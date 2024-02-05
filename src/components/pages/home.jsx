@@ -1,5 +1,5 @@
 //librairies
-import React from "react";
+import React, { useRef } from 'react';
 import styled from "styled-components";
 
 //components
@@ -10,6 +10,7 @@ import Contact from "../contact";
 import FAQ from "../faq";
 import Services from "../services";
 import Recommend from "../recommend";
+import Navbar from "../navbar";
 
 
 const Container = styled.div`
@@ -26,10 +27,12 @@ scrollbar-width: none;
 `
 
 function Home() {
+  const servicesRef = useRef();
+
   return (
     <Container>
-      <Intro />
-      <Services />
+      <Intro servicesRef={servicesRef} />   
+      <Services ref={servicesRef} />
       <Contact />
       <Recommend />
       <FAQ />

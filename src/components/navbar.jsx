@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 //styled components
 const Section = styled.div`
@@ -69,27 +69,30 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Navbar = () => {
-    return (
-        <Section>
-            <Container>
-                <Links>
-                <Logo src="./img/logo.png"/>
-                <List>
-                    <ListItem>O nas</ListItem>
-                    <ListItem>Usługi</ListItem>
-                    <ListItem>Kontakt</ListItem>
-                    <ListItem>Polecają nas</ListItem>
-                    <ListItem>FAQ</ListItem>
-                </List>
-                </Links>
-                <Icons>
-                    <Icon src="./img/search.png"/>
-                    <Button>Zatrudnij nas</Button>
-                </Icons>
-            </Container>
-        </Section>
-    );
+const Navbar = ({ servicesRef }) => {
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <Section>
+      <Container>
+        <Links>
+          <Logo src="./img/logo.png" />
+          <List>
+            <ListItem>O nas</ListItem>
+            <ListItem onClick={() => scrollToSection(servicesRef)}> Usługi </ListItem>
+            <ListItem>Kontakt</ListItem>
+            <ListItem>Polecają nas</ListItem>
+            <ListItem>FAQ</ListItem>
+          </List>
+        </Links>
+        <Icons></Icons>
+      </Container>
+    </Section>
+  );
 };
 
 export default Navbar;
