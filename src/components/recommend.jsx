@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from "react";
 import styled from 'styled-components';
 
 const RecommendsSection = styled.div`
@@ -26,9 +26,9 @@ const Logo = styled.img`
   }
 `;
 
-const Recommend = () => {
+const Recommend = forwardRef((props, ref) => {
     return (
-        <RecommendsSection>
+        <RecommendsSection ref={ref}>
             <Logo src="./img/search.png" alt="Company 1" />
             <p>Company 1</p>
             <Logo src="./img/search.png" alt="Company 2" />
@@ -38,6 +38,6 @@ const Recommend = () => {
             {/* Add more logos and text as needed */}
         </RecommendsSection>
     );
-};
+});
 
 export default Recommend;

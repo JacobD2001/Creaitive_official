@@ -120,10 +120,10 @@ const Img = styled.img`
   }
 `;
 
-const Intro = ({ servicesRef }) => {
+const Intro = forwardRef(({ servicesRef, contactRef, recommendRef, faqRef }, introRef) => {
   return (
-    <Section>
-      <Navbar servicesRef={servicesRef} />
+    <Section ref={introRef}>
+      <Navbar servicesRef={servicesRef} contactRef={contactRef} recommendRef={recommendRef} faqRef={faqRef} />
       <Container>
         <Left>
           <Title>Think. Make. Solve.</Title>
@@ -157,6 +157,6 @@ const Intro = ({ servicesRef }) => {
       </Container>
     </Section>
   );
-};
+});
 
 export default Intro;

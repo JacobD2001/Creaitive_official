@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, forwardRef } from "react";
 //import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 //import Map from "./Map";
@@ -73,7 +73,7 @@ const Right = styled.div`
   }
 `;
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
     // const ref = useRef();
     // const [success, setSuccess] = useState(null);
   
@@ -99,7 +99,7 @@ const Contact = () => {
     //     );
     // };
     return (
-      <Section>
+      <Section ref={ref}>
         <Container>
           <Left>
             {/* <Form ref={ref} onSubmit={handleSubmit}> */}
@@ -123,7 +123,7 @@ const Contact = () => {
         </Container>
       </Section>
     );
-  };
+  });
   
   export default Contact;
   

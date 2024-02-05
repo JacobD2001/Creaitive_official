@@ -69,7 +69,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Navbar = ({ servicesRef }) => {
+const Navbar = ({ introRef, servicesRef, contactRef, recommendRef, faqRef }) => {
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
@@ -82,11 +82,11 @@ const Navbar = ({ servicesRef }) => {
         <Links>
           <Logo src="./img/logo.png" />
           <List>
-            <ListItem>O nas</ListItem>
-            <ListItem onClick={() => scrollToSection(servicesRef)}> Usługi </ListItem>
-            <ListItem>Kontakt</ListItem>
-            <ListItem>Polecają nas</ListItem>
-            <ListItem>FAQ</ListItem>
+            <ListItem onClick={() => scrollToSection(introRef)}>O nas</ListItem>
+            <ListItem onClick={() => scrollToSection(servicesRef)}>Usługi</ListItem>
+            <ListItem onClick={() => scrollToSection(contactRef)}>Kontakt</ListItem>
+            <ListItem onClick={() => scrollToSection(recommendRef)}>Polecają nas</ListItem>
+            <ListItem onClick={() => scrollToSection(faqRef)}>FAQ</ListItem>
           </List>
         </Links>
         <Icons></Icons>

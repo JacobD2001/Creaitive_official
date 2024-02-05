@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import styled from 'styled-components';
 
 const FaqSection = styled.div`
@@ -35,9 +35,9 @@ const FaqContent = styled.div`
   margin-top: 20px;
 `;
 
-const Faq = () => {
+const Faq = forwardRef((props, ref) => {
   return (
-    <FaqSection>
+    <FaqSection ref={ref}>
       <FaqContainer>
         <FaqTitle>Frequently Asked Questions</FaqTitle>
         <FaqContent>
@@ -51,6 +51,6 @@ const Faq = () => {
       </FaqContainer>
     </FaqSection>
   );
-};
+});
 
 export default Faq;

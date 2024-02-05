@@ -27,15 +27,19 @@ scrollbar-width: none;
 `
 
 function Home() {
+  const introRef = useRef();
   const servicesRef = useRef();
+  const contactRef = useRef();
+  const recommendRef = useRef();
+  const faqRef = useRef();
 
   return (
     <Container>
-      <Intro servicesRef={servicesRef} />   
+      <Intro ref={introRef} servicesRef={servicesRef} contactRef={contactRef} recommendRef={recommendRef} faqRef={faqRef} />   
       <Services ref={servicesRef} />
-      <Contact />
-      <Recommend />
-      <FAQ />
+      <Contact ref={contactRef} />
+      <Recommend ref={recommendRef} />
+      <FAQ ref={faqRef} />
       <Footer />
     </Container>
   );
