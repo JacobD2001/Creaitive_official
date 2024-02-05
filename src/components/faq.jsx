@@ -2,7 +2,7 @@ import React, {forwardRef} from 'react';
 import styled from 'styled-components';
 
 const FaqSection = styled.div`
-  height: 60vh; /* Adjust the height as needed */
+  height: 100vh; /* Adjust the height as needed */
   display: flex;
   align-items: center;
   justify-content: center;

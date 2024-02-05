@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterSection = styled.footer`
-  height: 50px; /* Adjust the height as needed */
-  color: white;
+height: 50px; /* Adjust the height as needed */
+color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-snap-align: center;
+
 `;
 
 const Footer = () => {

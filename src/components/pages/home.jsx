@@ -35,6 +35,7 @@ function Home() {
 
   return (
     <Container>
+      <Navbar introRef={introRef} servicesRef={servicesRef} contactRef={contactRef} recommendRef={recommendRef} faqRef={faqRef} />
       <Intro ref={introRef} servicesRef={servicesRef} contactRef={contactRef} recommendRef={recommendRef} faqRef={faqRef} />   
       <Services ref={servicesRef} />
       <Contact ref={contactRef} />

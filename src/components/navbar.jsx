@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import styled from "styled-components";
 
 //styled components
 const Section = styled.div`
   display: flex;
   justify-content: center;
+  position: fixed;
+  z-index: 10000; // Increase this value if the navbar is behind some elements
 
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -32,6 +34,7 @@ const Links = styled.div`
 
 const Logo = styled.img`
   height: 50px;
+  cursor: pointer;
 `;
 
 const List = styled.ul`
@@ -80,7 +83,7 @@ const Navbar = ({ introRef, servicesRef, contactRef, recommendRef, faqRef }) => 
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/logo.png" />
+          <Logo onClick={() => scrollToSection(introRef)} src="./img/logo.png" />
           <List>
             <ListItem onClick={() => scrollToSection(introRef)}>O nas</ListItem>
             <ListItem onClick={() => scrollToSection(servicesRef)}>Usługi</ListItem>
