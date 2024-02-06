@@ -55,6 +55,7 @@ const Link = styled.a`
 const Footer = forwardRef((props, ref) => {
   return (
     <FooterSection ref={ref}>
+      {/* <Recommend /> */}
       <BigText>Porozmawiajmy</BigText>
       <Separator />
       <ColumnsContainer>
