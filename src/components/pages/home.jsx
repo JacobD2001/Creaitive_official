@@ -9,8 +9,9 @@ import Footer from "../footer";
 import Contact from "../contact";
 import FAQ from "../faq";
 import Services from "../services";
-import Recommend from "../recommend";
 import Navbar from "../navbar";
+import Recommend from "../recommend";
+
 
 
 const Container = styled.div`
@@ -41,7 +42,7 @@ function Home() {
       <Contact ref={contactRef} />
       <Recommend ref={recommendRef} />
       <FAQ ref={faqRef} />
-      <Footer ref={recommendRef}/>
+      <Footer />
     </Container>
   );
 }

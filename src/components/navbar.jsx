@@ -88,8 +88,8 @@ const Navbar = ({ introRef, servicesRef, contactRef, recommendRef, faqRef }) => 
             <ListItem onClick={() => scrollToSection(introRef)}>O nas</ListItem>
             <ListItem onClick={() => scrollToSection(servicesRef)}>Usługi</ListItem>
             <ListItem onClick={() => scrollToSection(contactRef)}>Kontakt</ListItem>
-            <ListItem onClick={() => scrollToSection(faqRef)}>FAQ</ListItem>
             <ListItem onClick={() => scrollToSection(recommendRef)}>Polecają nas</ListItem>
+            <ListItem onClick={() => scrollToSection(faqRef)}>FAQ</ListItem>
           </List>
         </Links>
         <Icons></Icons>

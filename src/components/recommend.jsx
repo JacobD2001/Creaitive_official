@@ -28,7 +28,7 @@ const RecommendsSection = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   overflow: hidden; /* Ensure overflow is hidden to hide the content outside the container */
 
   @media only screen and (max-width: 768px) {

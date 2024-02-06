@@ -1,6 +1,5 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Recommend from './Recommend';
 
 const FooterSection = styled.footer`
   display: flex;
@@ -52,10 +51,9 @@ const Link = styled.a`
   margin: 5px 0;
 `;
 
-const Footer = forwardRef((props, ref) => {
+const Footer = () => {
   return (
-    <FooterSection ref={ref}>
-      {/* <Recommend /> */}
+    <FooterSection>
       <BigText>Porozmawiajmy</BigText>
       <Separator />
       <ColumnsContainer>
@@ -78,6 +76,6 @@ const Footer = forwardRef((props, ref) => {
       </ColumnsContainer>
     </FooterSection>
   );
-});
+};
 
 export default Footer;
