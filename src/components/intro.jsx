@@ -1,7 +1,23 @@
 import React, { forwardRef } from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 import Navbar from "./navbar";
+
+//animations
+const pulseAnimation = keyframes`
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0px rgba(218, 78, 162, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(218, 78, 162, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0px rgba(218, 78, 162, 0.7);
+  }
+`;
 
 //styled components
 const Section = styled.div`
@@ -80,11 +96,12 @@ const Button = styled.button`
   background-color: #da4ea2;
   color: white;
   font-weight: 500;
-  width: 100px;
+  width: 130px;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  animation: ${pulseAnimation} 5s infinite; 
 `;
 
 const Right = styled.div`
@@ -133,7 +150,7 @@ const Intro = forwardRef((props, introRef) => {
           <Desc>
             we enjoy creating delightful, human-centered digital experiences.
           </Desc>
-          <Button>Learn More</Button>
+          <Button>Porozmawiajmy...</Button>
         </Left>
         <Right>
           {/* <Canvas>

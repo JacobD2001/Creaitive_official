@@ -8,8 +8,19 @@ Libraries to install
 5. npm install @emailjs/browser
 
 //TO DO:
+Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/youtube23/blob/3d-portfolio/src/components/WebDesign.jsx
+
 1. Dostosować biznesowo services
 2. Dostosować pod odpowiedniego maila mailing service
+3. Pozamieniać zdjęcia - na końcu
+4. Zabawa z css typu buttony animacje itd
+5. Dodać modele 3d
+6. Fix animacja css reccommend
 
+FLOW: 
 
+Dokładna oferta z opisami żeby miało ręce i nogi -> Komponenty w services -> Teksty home page pozmieniać -> Dodać zdjęcia i modele 3d homepage -> naprawić bugi -> pobawić się więcej cssesem na home pagu - 8.02
 
+----->
+
+Budowa stron serwisów - 13.02

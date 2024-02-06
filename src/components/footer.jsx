@@ -10,6 +10,7 @@ const FooterSection = styled.footer`
   color: white;
   text-align: center;
   scroll-snap-align: center;
+
 `;
 
 const Separator = styled.hr`
