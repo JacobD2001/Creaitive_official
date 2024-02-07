@@ -1,0 +1,164 @@
+import React, { useState, forwardRef, Suspense } from "react";
+import styled from "styled-components";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+
+//import services components
+import WirtualniInfluencerzy from "./services_components/wirtualniInfluencerzy";
+import TresciGraficzne from "./services_components/tresciGraficzne";
+import IndywidualneRozwiazania from "./services_components/indywidualneRozwiazania";
+import AIOptymalizacjaProcesow from "./services_components/AIOptymalizacjaProcesow";
+import Chatboty from "./services_components/chatboty";
+import KrotkieVideo from "./services_components/krotkieVideo";
+import StronyInternetowe from "./services_components/stronyInternetowe";
+
+// TO DO: Adjust 'data' based on business needs
+const data = [
+  "Strony Internetowe",
+  "Chatboty",
+  "AI w optymalizacji procesów",
+  "Treści Graficzne",
+  "Krótkie Video",
+  "Wirtualni Influencerzy",
+  "Indywidualne Rozwiązania",
+];
+
+const Section = styled.div`
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+`;
+
+const Container = styled.div`
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
+`;
+
+const Right = styled.div`
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    align-items: center;
+  }
+`;
+
+const List = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+const ListItem = styled.li`
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
+
+  ::after {
+    content: "${(props) => props.text}";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: pink;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    ::after {
+      animation: moveText 0.5s linear both;
+
+      @keyframes moveText {
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
+`;
+
+const Left = styled.div`
+  flex: 2;
+  position: relative;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+  }
+`;
+
+//component to map
+const servicesMapComponent = {
+  "Strony Internetowe": StronyInternetowe,
+  Chatboty: Chatboty,
+  "AI w optymalizacji procesów": AIOptymalizacjaProcesow,
+  "Treści Graficzne": TresciGraficzne,
+  "Krótkie Video": KrotkieVideo,
+  "Wirtualni Influencerzy": WirtualniInfluencerzy,
+  "Indywidualne Rozwiązania": IndywidualneRozwiazania,
+};
+
+const Packages = forwardRef((props, ref) => {
+  const [work, setWork] = useState(data[0]);
+  const WorkComponent = servicesMapComponent[work];
+
+  return (
+    <Section ref={ref}>
+      <Container>
+        <Left>
+          <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
+            <Suspense fallback={null}>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.6}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Suspense>
+          </Canvas>
+          <WorkComponent />
+        </Left>
+        <Right>
+          <List>
+            {data.map((item) => (
+              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+                {item}
+              </ListItem>
+            ))}
+          </List>
+        </Right>
+      </Container>
+    </Section>
+  );
+});
+
+export default Packages;
