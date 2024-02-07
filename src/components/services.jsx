@@ -1,5 +1,8 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, forwardRef, Suspense } from "react";
 import styled from "styled-components";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+
 
 //import services components
 import BudowanieInfluencerek from "./services_components/budowanieInfluencerek";
@@ -44,13 +47,14 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   align-items: center;
+  gap: 20px;
 
   @media only screen and (max-width: 768px) {
-    padding: 20px;
-    justify-content: center;
+    flex: 1;
+    align-items: center;
   }
 `;
 
@@ -100,7 +104,12 @@ const ListItem = styled.li`
 `;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
+  position: relative;
+  @media only screen and (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+  }
 `;
 
 //component to map
@@ -132,6 +141,21 @@ const Services = forwardRef((props, ref) => {
           </List>
         </Left>
         <Right>
+        <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
+            <Suspense fallback={null}>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.6}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Suspense>
+          </Canvas>
           <WorkComponent />
         </Right>
       </Container>

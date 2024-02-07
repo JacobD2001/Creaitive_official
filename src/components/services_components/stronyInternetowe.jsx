@@ -1,8 +1,8 @@
 import React, {Suspense} from "react";
 import styled, { keyframes } from "styled-components";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stage } from "@react-three/drei";
-import Console from "../3d_models/console";
+//import { OrbitControls, Stage } from "@react-three/drei";
+//import Console from "../3d_models/console";
 
 const pulseAnimation = keyframes`
   0% {
@@ -88,14 +88,14 @@ const StyledCanvas = styled(Canvas)`
 const StronyInternetowe = () => {
   return (
     <WorkComponentContainer>
-      <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
+      {/* <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
         <Suspense fallback={null} >
         <Stage environment="city" intensity={0.6}>
           <Console />
         </Stage>
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={50} />
         </Suspense>
-      </Canvas>
+      </Canvas> */}
       <KeyPointsContainer>
         <KeyPointColumn style={{ gridArea: "1 / 1 / span 1 / span 1" }}>
           {/* Key Point 1 */}
