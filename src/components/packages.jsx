@@ -2,25 +2,20 @@ import React, { useState, forwardRef, Suspense } from "react";
 import styled from "styled-components";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import CanvasBlob from "./3d_models/CanvasBlob";
 
 //import services components
-import WirtualniInfluencerzy from "./services_components/wirtualniInfluencerzy";
-import TresciGraficzne from "./services_components/tresciGraficzne";
-import IndywidualneRozwiazania from "./services_components/indywidualneRozwiazania";
-import AIOptymalizacjaProcesow from "./services_components/AIOptymalizacjaProcesow";
-import Chatboty from "./services_components/chatboty";
-import KrotkieVideo from "./services_components/krotkieVideo";
-import StronyInternetowe from "./services_components/stronyInternetowe";
+import BusinessAutomation from "./packages_components/businessAutomation";
+import BusinessInfluence from "./packages_components/businessInfluence";
+import DigitalPresence from "./packages_components/digitalPresence";
+import fullComfort from "./packages_components/fullComfort";
 
-// TO DO: Adjust 'data' based on business needs
 const data = [
-  "Strony Internetowe",
-  "Chatboty",
-  "AI w optymalizacji procesów",
-  "Treści Graficzne",
-  "Krótkie Video",
-  "Wirtualni Influencerzy",
-  "Indywidualne Rozwiązania",
+    "Pakiet Digital Presence",
+    "Pakiet Full Comfort",
+    "Pakiet Business Influence",
+
+"Pakiet Business Automation",
 ];
 
 const Section = styled.div`
@@ -112,39 +107,23 @@ const Left = styled.div`
 `;
 
 //component to map
-const servicesMapComponent = {
-  "Strony Internetowe": StronyInternetowe,
-  Chatboty: Chatboty,
-  "AI w optymalizacji procesów": AIOptymalizacjaProcesow,
-  "Treści Graficzne": TresciGraficzne,
-  "Krótkie Video": KrotkieVideo,
-  "Wirtualni Influencerzy": WirtualniInfluencerzy,
-  "Indywidualne Rozwiązania": IndywidualneRozwiazania,
+const packagesMapComponent = {
+    "Pakiet Digital Presence": DigitalPresence,
+    "Pakiet Full Comfort": fullComfort,
+    "Pakiet Business Influence": BusinessInfluence,
+
+"Pakiet Business Automation": BusinessAutomation,
 };
 
 const Packages = forwardRef((props, ref) => {
   const [work, setWork] = useState(data[0]);
-  const WorkComponent = servicesMapComponent[work];
+  const WorkComponent = packagesMapComponent[work];
 
   return (
     <Section ref={ref}>
       <Container>
         <Left>
-          <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
-            <Suspense fallback={null}>
-              <OrbitControls enableZoom={false} />
-              <ambientLight intensity={1} />
-              <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 100, 200]} scale={2.6}>
-                <MeshDistortMaterial
-                  color="#3d1c56"
-                  attach="material"
-                  distort={0.5}
-                  speed={2}
-                />
-              </Sphere>
-            </Suspense>
-          </Canvas>
+         <CanvasBlob/>
           <WorkComponent />
         </Left>
         <Right>

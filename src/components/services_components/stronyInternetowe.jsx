@@ -106,7 +106,7 @@ const StronyInternetowe = () => {
         </KeyPointColumn>
 
         <KeyPointColumn
-          style={{ gridArea: "1 / 2 / span 1 / span 1", margin: "auto" }}
+          style={{ gridArea: "1 / 2 / span 1 / span 1" }}
         >
           {/* Key Point 2 */}
           <Title>Funkcjonalność</Title>
