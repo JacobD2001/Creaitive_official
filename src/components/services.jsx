@@ -5,22 +5,22 @@ import { Canvas } from "@react-three/fiber";
 
 
 //import services components
-import BudowanieInfluencerek from "./services_components/budowanieInfluencerek";
-import GraficznyContent from "./services_components/graficznyContent";
+import WirtualniInfluencerzy from "./services_components/wirtualniInfluencerzy";
+import TresciGraficzne from "./services_components/tresciGraficzne";
 import IndywidualneRozwiazania from "./services_components/indywidualneRozwiazania";
-import IndywidualneWdrozeniaAI from "./services_components/indywidualneWdrozeniaAI";
+import AIOptymalizacjaProcesow from "./services_components/AIOptymalizacjaProcesow";
 import Chatboty from "./services_components/chatboty";
-import ShortVideoContent from "./services_components/shortVideoContent";
+import KrotkieVideo from "./services_components/krotkieVideo";
 import StronyInternetowe from "./services_components/stronyInternetowe";
 
 // TO DO: Adjust 'data' based on business needs
 const data = [
   "Strony Internetowe",
-  "Chatboty", //Integracje AI komponent
-  "AI w optymalizacji procesów", //Indywidualne Wdrożenia AI komponent
-  "Treści Graficzne", //Graficzny Content komponent
-  "Krótkie Video", //Short Video Content komponent
-  "Wirtualni Influencerzy", //Budowanie Influencerek komponent
+  "Chatboty", 
+  "AI w optymalizacji procesów", 
+  "Treści Graficzne", 
+  "Krótkie Video", 
+  "Wirtualni Influencerzy", 
   "Indywidualne Rozwiązania",
 ];
 
@@ -116,10 +116,10 @@ const Right = styled.div`
 const servicesMapComponent = {
   "Strony Internetowe": StronyInternetowe,
   "Chatboty": Chatboty,
-  "Indywidualne Wdrożenia AI": IndywidualneWdrozeniaAI,
-  "Graficzny Content": GraficznyContent,
-  "Short Video Content": ShortVideoContent,
-  "Budowanie Influencerek": BudowanieInfluencerek,
+  "AI w optymalizacji procesów": AIOptymalizacjaProcesow,
+  "Treści Graficzne": TresciGraficzne,
+  "Krótkie Video": KrotkieVideo,
+  "Wirtualni Influencerzy": WirtualniInfluencerzy,
   "Indywidualne Rozwiązania": IndywidualneRozwiazania,
 };
 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function BudowanieInfluencerek() {
+function wirtualniInfluencerzy() {
     return (
         <div>influencerki</div>
     )
 }
 
-export default BudowanieInfluencerek
+export default wirtualniInfluencerzy

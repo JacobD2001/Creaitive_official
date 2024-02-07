@@ -1,9 +1,9 @@
 import React from 'react'
 
-function GraficznyContent() {
+function tresciGraficzne() {
     return (
         <div>graficzny cont</div>
     )
 }
 
-export default GraficznyContent
+export default tresciGraficzne

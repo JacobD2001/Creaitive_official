@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ShortVideoContent() {
+function krotkieVideo() {
     return (
         <div>short video</div>
     )
 }
 
-export default ShortVideoContent
+export default krotkieVideo
