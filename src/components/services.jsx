@@ -6,18 +6,18 @@ import BudowanieInfluencerek from "./services_components/budowanieInfluencerek";
 import GraficznyContent from "./services_components/graficznyContent";
 import IndywidualneRozwiazania from "./services_components/indywidualneRozwiazania";
 import IndywidualneWdrozeniaAI from "./services_components/indywidualneWdrozeniaAI";
-import IntegracjeAI from "./services_components/integracjeAI";
+import Chatboty from "./services_components/chatboty";
 import ShortVideoContent from "./services_components/shortVideoContent";
 import StronyInternetowe from "./services_components/stronyInternetowe";
 
 // TO DO: Adjust 'data' based on business needs
 const data = [
   "Strony Internetowe",
-  "Integracje AI",
-  "Indywidualne Wdrożenia AI",
-  "Graficzny Content",
-  "Short Video Content",
-  "Budowanie Influencerek",
+  "Chatboty", //Integracje AI komponent
+  "AI w optymalizacji procesów", //Indywidualne Wdrożenia AI komponent
+  "Treści Graficzne", //Graficzny Content komponent
+  "Krótkie Video", //Short Video Content komponent
+  "Wirtualni Influencerzy", //Budowanie Influencerek komponent
   "Indywidualne Rozwiązania",
 ];
 
@@ -62,7 +62,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   cursor: pointer;
   color: transparent;
@@ -106,7 +106,7 @@ const Right = styled.div`
 //component to map
 const servicesMapComponent = {
   "Strony Internetowe": StronyInternetowe,
-  "Integracje AI": IntegracjeAI,
+  "Chatboty": Chatboty,
   "Indywidualne Wdrożenia AI": IndywidualneWdrozeniaAI,
   "Graficzny Content": GraficznyContent,
   "Short Video Content": ShortVideoContent,

@@ -20,11 +20,11 @@ const Desc = styled.div`
   }
 `;
 
-function IntegracjeAI() {
+function Chatboty() {
     return (
         <Desc>Integracje AI</Desc>
 
     )
 }
 
-export default IntegracjeAI
+export default Chatboty
