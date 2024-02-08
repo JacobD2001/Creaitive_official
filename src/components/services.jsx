@@ -48,7 +48,7 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 2;
+  flex: 2;  
   display: flex;
   align-items: center;
   gap: 20px;
@@ -71,7 +71,7 @@ const ListItem = styled.li`
   font-weight: bold;
   cursor: pointer;
   color: transparent;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 0.5px white;
   position: relative;
 
   @media only screen and (max-width: 768px) {
@@ -85,7 +85,7 @@ const ListItem = styled.li`
     position: absolute;
     top: 0;
     left: 0;
-    color: pink;
+    color: #da4ea2;
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
@@ -103,6 +103,8 @@ const ListItem = styled.li`
     }
   }
 `;
+
+
 
 const Right = styled.div`
   flex: 2;
