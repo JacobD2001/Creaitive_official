@@ -22,8 +22,7 @@ const pulseAnimation = keyframes`
 const WorkComponentContainer = styled.div`
   display: flex;
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
