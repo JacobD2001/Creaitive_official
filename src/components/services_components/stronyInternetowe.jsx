@@ -83,6 +83,56 @@ const StyledCanvas = styled(Canvas)`
   z-index: 0; // Set z-index to 0 to place it behind the text and button
 `;
 
+//experiment with animation for text
+// const fadeInAnimation = keyframes`
+//   to {
+//     opacity: 1;
+//     filter: blur(0);
+//   }
+// `;
+
+
+// const AnimatedTitle = styled(Title)`
+//   ::after {
+//     content: "${(props) => props.children}";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     color: pink;
+//     width: 0px;
+//     overflow: hidden;
+//     white-space: nowrap;
+//   }
+
+//   &:hover {
+//     ::after {
+//       animation: ${fadeInAnimation} 0.8s linear both;
+//     }
+//   }
+// `;
+
+// const AnimatedSubtitle = styled(Subtitle)`
+//   ::after {
+//     content: "${(props) => props.children}";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     color: pink;
+//     width: 0px;
+//     overflow: hidden;
+//     white-space: nowrap;
+//   }
+
+//   &:hover {
+//     ::after {
+//       animation: ${fadeInAnimation} 0.8s linear both;
+//     }
+//   }
+// `;
+
+
+
+
 
 const StronyInternetowe = () => {
   return (
@@ -142,3 +192,4 @@ const StronyInternetowe = () => {
   );
 };
 export default StronyInternetowe;
+

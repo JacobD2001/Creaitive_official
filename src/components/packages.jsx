@@ -11,11 +11,10 @@ import DigitalPresence from "./packages_components/digitalPresence";
 import fullComfort from "./packages_components/fullComfort";
 
 const data = [
-    "Pakiet Digital Presence",
-    "Pakiet Full Comfort",
-    "Pakiet Business Influence",
-
-"Pakiet Business Automation",
+  "Pakiet Digital Presence",
+  "Pakiet Full Comfort",
+  "Pakiet Business Influence",
+  "Pakiet Business Automation",
 ];
 
 const Section = styled.div`
@@ -108,11 +107,11 @@ const Left = styled.div`
 
 //component to map
 const packagesMapComponent = {
-    "Pakiet Digital Presence": DigitalPresence,
-    "Pakiet Full Comfort": fullComfort,
-    "Pakiet Business Influence": BusinessInfluence,
+  "Pakiet Digital Presence": DigitalPresence,
+  "Pakiet Full Comfort": fullComfort,
+  "Pakiet Business Influence": BusinessInfluence,
 
-"Pakiet Business Automation": BusinessAutomation,
+  "Pakiet Business Automation": BusinessAutomation,
 };
 
 const Packages = forwardRef((props, ref) => {
@@ -123,7 +122,7 @@ const Packages = forwardRef((props, ref) => {
     <Section ref={ref}>
       <Container>
         <Left>
-         <CanvasBlob/>
+          <CanvasBlob />
           <WorkComponent />
         </Left>
         <Right>
