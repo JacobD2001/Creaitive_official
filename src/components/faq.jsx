@@ -77,6 +77,7 @@ const Summary = styled.div`
   padding: 10px;
   background-color: #da4ea2;
   color: white;
+  border-radius: 10px; // Add this line
 `;
 
 const DropdownIcon = styled.div`
@@ -87,6 +88,7 @@ const Answer = styled.div`
   display: ${(props) => (props.open ? 'block' : 'none')};
   padding: 10px;
   background-color: #3d1c56;
+  border-radius: 10px; // Add this line
 `;
 
 const Faq = forwardRef((props, ref) => {
@@ -125,7 +127,7 @@ const Faq = forwardRef((props, ref) => {
       <Container>
         <Left>{/* Content for the left column goes here */}</Left>
         <Right>
-          <Title>Kto pyta nie błądzi...</Title>
+          <Title>Masz pytanie?</Title>
           <FaqContent>
             {faqItems.map((item, index) => (
               <Dropdown key={index}>
