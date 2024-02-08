@@ -35,20 +35,26 @@ const Column = styled.div`
 `;
 
 const BigText = styled.h1`
-  font-weight: 200;
+font-size: 30px;
+
+@media only screen and (max-width: 768px) {
+  text-align: center;
+}
   margin-bottom: 10px;
 `;
 
 const Title = styled.h2`
   font-weight: 200;
+  color: #da4ea2;
+
   margin-bottom: 5px;
   text-align: left;
 `;
 
 const Link = styled.a`
-  color: white;
+font-size: 16px;
+color: lightgray;
   text-decoration: none;
-  font-size: 16px;
   margin: 5px 0;
 `;
 
