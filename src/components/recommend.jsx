@@ -60,24 +60,38 @@ const Text = styled.p`
   margin-top: 10px; /* Adjust the margin as needed */
 `;
 
-const Recommend = forwardRef((props, ref) => {
-    return (
-        <RecommendsSection ref={ref}>
-            <RecommendationContainer>
-                <Logo src="./img/logo.png" alt="Company 1" />
-                <Text>Llama the dev</Text>
-            </RecommendationContainer>
-            <RecommendationContainer>
-                <Logo src="./img/search.png" alt="Company 2" />
-                <Text>Company 2</Text>
-            </RecommendationContainer>
-            <RecommendationContainer>
-                <Logo src="./img/search.png" alt="Company 3" />
-                <Text>Company 3</Text>
-            </RecommendationContainer>
-            {/* Add more logos and text as needed */}
-        </RecommendsSection>
-    );
-});
+const StyledLink = styled.a`
+  color: white; // Change this to the color you want
+  text-decoration: none; // Remove the underline
 
+  &:hover {
+    color: #888; // Change this to the color you want when hovering
+  }
+`;
+
+const Recommend = forwardRef((props, ref) => {
+  return (
+      <RecommendsSection ref={ref}>
+          <RecommendationContainer>
+              <StyledLink href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <Logo src="./img/logo.png" alt="Company 1" />
+                  <Text>Llama the dev</Text>
+              </StyledLink>
+          </RecommendationContainer>
+          <RecommendationContainer>
+              <StyledLink href="https://adadmeble.pl/" target="_blank" rel="noopener noreferrer">
+                  <Logo src="./img/search.png" alt="Company 2" />
+                  <Text>ADAD</Text>
+              </StyledLink>
+          </RecommendationContainer>
+          <RecommendationContainer>
+              <StyledLink href="https://example.com" target="_blank" rel="noopener noreferrer">
+                  <Logo src="./img/search.png" alt="Company 3" />
+                  <Text>Company 3</Text>
+              </StyledLink>
+          </RecommendationContainer>
+          {/* Add more logos and text as needed */}
+      </RecommendsSection>
+  );
+});
 export default Recommend;
