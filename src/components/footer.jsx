@@ -78,7 +78,7 @@ const Footer = () => {
         </Column>
         <Column>
           <Title>Inne</Title>
-          <Link href="#">Polityka prywatności</Link>
+          <Link href="https://lpcreation.pl/Polityka.pdf" target='_blank' rel="noopener noreferrer">Polityka prywatności</Link>
         </Column>
       </ColumnsContainer>
     </FooterSection>
