@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 
 //styled components
@@ -49,6 +49,8 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   cursor: pointer;
+
+  color: ${(props) => (props.isActive ? '#ff0000' : 'inherit')}; 
 `;
 
 const Icons = styled.div`
@@ -72,7 +74,29 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Navbar = ({ introRef, servicesRef, packagesRef, contactRef, recommendRef, faqRef }) => {
+const Navbar = ({ parentRef }) => {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: parentRef.current,
+      rootMargin: "0px",
+      threshold: 0.5,
+    });
+
+    // Observe the parent container
+    observer.observe(parentRef.current);
+
+    return () => observer.disconnect();
+  }, [parentRef]);
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
@@ -83,14 +107,18 @@ const Navbar = ({ introRef, servicesRef, packagesRef, contactRef, recommendRef, 
     <Section>
       <Container>
         <Links>
-          <Logo onClick={() => scrollToSection(introRef)} src="./img/logo.png" />
+          <Logo
+            onClick={() => scrollToSection(introRef)}
+            src="./img/logo.png"
+          />
           <List>
-            <ListItem onClick={() => scrollToSection(introRef)}>O nas</ListItem>
-            <ListItem onClick={() => scrollToSection(servicesRef)}>Usługi</ListItem>
-            <ListItem onClick={() => scrollToSection(packagesRef)}>Pakiety</ListItem> 
-            <ListItem onClick={() => scrollToSection(contactRef)}>Kontakt</ListItem>
-            <ListItem onClick={() => scrollToSection(recommendRef)}>Polecają nas</ListItem>
-            <ListItem onClick={() => scrollToSection(faqRef)}>FAQ</ListItem>
+          <ListItem isActive={activeSection === 'intro'} onClick={() => scrollToSection(introRef)}>O nas</ListItem>
+<ListItem isActive={activeSection === 'services'} onClick={() => scrollToSection(servicesRef)}>Usługi</ListItem>
+<ListItem isActive={activeSection === 'packages'} onClick={() => scrollToSection(packagesRef)}>Pakiety</ListItem> 
+<ListItem isActive={activeSection === 'contact'} onClick={() => scrollToSection(contactRef)}>Kontakt</ListItem>
+<ListItem isActive={activeSection === 'recommend'} onClick={() => scrollToSection(recommendRef)}>Polecają nas</ListItem>
+<ListItem isActive={activeSection === 'faq'} onClick={() => scrollToSection(faqRef)}>FAQ</ListItem>
+
           </List>
         </Links>
         <Icons></Icons>
@@ -100,7 +128,6 @@ const Navbar = ({ introRef, servicesRef, packagesRef, contactRef, recommendRef, 
 };
 
 export default Navbar;
-
 
 // TO DO: This is for animating the navbar on scorll and click but not works for now
 // const Navbar = ({ introRef, servicesRef, contactRef, recommendRef, faqRef }) => {
@@ -158,4 +185,3 @@ export default Navbar;
 // };
 
 // export default Navbar;
-
