@@ -66,6 +66,7 @@ const List = styled.ul`
   gap: 20px;
 `;
 
+//#da4ea2 - rozowy
 const ListItem = styled.li`
   font-size: 50px;
   font-weight: bold;
@@ -85,7 +86,7 @@ const ListItem = styled.li`
     position: absolute;
     top: 0;
     left: 0;
-    color: #da4ea2;
+    color: #da4ea2; 
     width: 0px;
     overflow: hidden;
     white-space: nowrap;

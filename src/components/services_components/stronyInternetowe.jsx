@@ -66,6 +66,11 @@ const Title = styled.h1`
   font-size: 35px;
   color: #da4ea2;
 
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
