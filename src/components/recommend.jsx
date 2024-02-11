@@ -43,6 +43,7 @@ const RecommendationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   animation: ${moveLeftToRight} 8s linear infinite; /* Adjust the duration and timing function as needed */
 `;
 
@@ -57,6 +58,7 @@ const Logo = styled.img`
 `;
 
 const Text = styled.p`
+font-weight: bold;
   margin-top: 10px; /* Adjust the margin as needed */
 `;
 
@@ -74,22 +76,22 @@ const Recommend = forwardRef((props, ref) => {
       <RecommendsSection ref={ref}>
           <RecommendationContainer>
               <StyledLink href="https://example.com" target="_blank" rel="noopener noreferrer">
-                  <Logo src="./img/logo.png" alt="Company 1" />
-                  <Text>Llama the dev</Text>
+                  <Logo src="./img/logo.png" alt="ADAD" />
+                  <Text>Adad meble</Text>
               </StyledLink>
           </RecommendationContainer>
           <RecommendationContainer>
               <StyledLink href="https://adadmeble.pl/" target="_blank" rel="noopener noreferrer">
-                  <Logo src="./img/search.png" alt="Company 2" />
-                  <Text>ADAD</Text>
+                  <Logo src="./img/logo.png" alt="AngryBunny" />
+                  <Text>AngryBunny</Text>
               </StyledLink>
           </RecommendationContainer>
-          <RecommendationContainer>
+          {/* <RecommendationContainer>
               <StyledLink href="https://example.com" target="_blank" rel="noopener noreferrer">
                   <Logo src="./img/search.png" alt="Company 3" />
                   <Text>Company 3</Text>
               </StyledLink>
-          </RecommendationContainer>
+          </RecommendationContainer> */}
           {/* Add more logos and text as needed */}
       </RecommendsSection>
   );

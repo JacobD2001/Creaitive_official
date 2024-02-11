@@ -180,7 +180,7 @@ const Intro = forwardRef((props, introRef) => {
         </Left>
         <Right>
 <CanvasBlob/>
-<Img src="./img/Creaitive_logo.jpg" />
+{/* <Img src="./img/moon.png" /> */}
 
         </Right>
       </Container>
