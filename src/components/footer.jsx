@@ -36,6 +36,7 @@ const Column = styled.div`
 
 const BigText = styled.h1`
 font-size: 30px;
+color: white;
 
 @media only screen and (max-width: 768px) {
   text-align: center;
@@ -44,8 +45,12 @@ font-size: 30px;
 `;
 
 const Title = styled.h2`
-  font-weight: 200;
-  color: #da4ea2;
+span {
+  background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
 
   margin-bottom: 5px;
   text-align: left;
@@ -65,19 +70,19 @@ const Footer = () => {
       <Separator />
       <ColumnsContainer>
         <Column>
-          <Title>Kontakt</Title>
+          <Title><span>Kontakt</span></Title>
           <Link href="mailto:info@example.com">info@example.com</Link>
           <Link>+48 888 999 888</Link>
         </Column>
         <Column>
-          <Title>Nasze Media</Title>
+          <Title><span>Media</span></Title>
           {/* Add your social media icons/links here */}
           <Link href="#">Instagram</Link>
           <Link href="#">Tiktok</Link>
           <Link href="#">X</Link>
         </Column>
         <Column>
-          <Title>Inne</Title>
+          <Title><span>Inne</span></Title>
           <Link href="https://lpcreation.pl/Polityka.pdf" target='_blank' rel="noopener noreferrer">Polityka prywatności</Link>
         </Column>
       </ColumnsContainer>

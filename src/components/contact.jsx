@@ -33,7 +33,7 @@ const Title = styled.h1`
   color: white;
 
   span {
-    background: linear-gradient(45deg, #ed15a5, #db1d9c);
+    background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
@@ -85,8 +85,8 @@ const ConfettiParticle = styled.div`
 
 const Button = styled.button`
   position: relative;
-  background-color: #da4ea2;
-  color: white;
+  background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+color: white;
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -206,6 +206,37 @@ const Contact = forwardRef((props, forwardedRef) => {
         }
       );
   };
+
+  return (
+    <Section ref={forwardedRef}>
+      <Container>
+        <Left>
+          <Form ref={formRef} onSubmit={handleSubmit}>
+            <Title>
+              ZADZWOŃ <span>606 704 195</span> LUB WYPEŁNIJ FORMULARZ
+            </Title>
+            <Input placeholder="Imię" name="name" />
+            <Input placeholder="Email" name="email" />
+            <TextArea
+              placeholder="Co chcesz nam przekazać?"
+              name="message"
+              rows={10}
+            />
+            <Button type="submit">WYŚLIJ</Button>
+            {success &&
+              "Dziękujemy, skontaktujemy się z Tobą tak szybko jak to możliwe."}
+          </Form>
+        </Left>
+        <Right>
+          <Map />
+        </Right>
+      </Container>
+    </Section>
+  );
+});
+
+export default Contact;
+
 //https://lpcreation.pl/thx
 
 // @keyframes confetti-slow {
@@ -261,33 +292,3 @@ const Contact = forwardRef((props, forwardedRef) => {
 // .confetti--animation-fast {
 //   animation: confetti-fast 1.25s linear 1 forwards;
 // }
-
-  return (
-    <Section ref={forwardedRef}>
-      <Container>
-        <Left>
-          <Form ref={formRef} onSubmit={handleSubmit}>
-            <Title>
-              ZADZWOŃ <span>606 704 195</span> LUB WYPEŁNIJ FORMULARZ
-            </Title>
-            <Input placeholder="Imię" name="name" />
-            <Input placeholder="Email" name="email" />
-            <TextArea
-              placeholder="Co chcesz nam przekazać?"
-              name="message"
-              rows={10}
-            />
-            <Button type="submit">WYŚLIJ</Button>
-            {success &&
-              "Dziękujemy, skontaktujemy się z Tobą tak szybko jak to możliwe."}
-          </Form>
-        </Left>
-        <Right>
-          <Map />
-        </Right>
-      </Container>
-    </Section>
-  );
-});
-
-export default Contact;

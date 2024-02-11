@@ -48,8 +48,8 @@ const KeyPointColumn = styled.div`
 `;
 
 const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
+background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+color: white;
   font-weight: 700;
   width: 200px;
   height: 50px;
@@ -65,7 +65,15 @@ const Button = styled.button`
 
 const Title = styled.h1`
   font-size: 35px;
-  color: #da4ea2;
+  background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
 
   @media only screen and (max-width: 768px) {
     text-align: center;

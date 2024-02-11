@@ -83,7 +83,7 @@ const Navbar = ({ introRef, servicesRef, packagesRef, contactRef, recommendRef, 
     <Section>
       <Container>
         <Links>
-          <Logo onClick={() => scrollToSection(introRef)} src="./img/logo.png" />
+          <Logo onClick={() => scrollToSection(introRef)} src="./img/enhanced.jpg" /> 
           <List>
             <ListItem onClick={() => scrollToSection(introRef)}>O nas</ListItem>
             <ListItem onClick={() => scrollToSection(servicesRef)}>Usługi</ListItem>
@@ -99,6 +99,7 @@ const Navbar = ({ introRef, servicesRef, packagesRef, contactRef, recommendRef, 
   );
 };
 
+//TO DO: LOGO DO ZMIANY XDD
 export default Navbar;
 
 

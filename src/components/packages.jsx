@@ -77,7 +77,10 @@ const ListItem = styled.li`
     position: absolute;
     top: 0;
     left: 0;
-    color: #da4ea2;
+    background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
@@ -95,6 +98,7 @@ const ListItem = styled.li`
     }
   }
 `;
+
 
 const Left = styled.div`
   flex: 2;

@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
+import CanvasBlob from "./3d_models/CanvasBlob";
 
 import Navbar from "./navbar";
 
@@ -64,6 +65,13 @@ const Left = styled.div`
 const Title = styled.h1`
   font-size: 74px;
 
+  span {
+    background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
@@ -80,12 +88,25 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
-  color: #da4ea2;
+background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+-webkit-background-clip: text;
+color: transparent;
+font-weight: bold;
 `;
 
 const Desc = styled.p`
   font-size: 24px;
+  margin: 0;
   color: lightgray;
+
+span {
+  background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+
   @media only screen and (max-width: 768px) {
     padding: 20px;
     text-align: center;
@@ -93,15 +114,15 @@ const Desc = styled.p`
 `;
 
 const Button = styled.button`
-  background-color: #da4ea2;
-  color: white;
+background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+color: white;
   font-weight: 500;
-  width: 130px;
+  width: 150px;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  animation: ${pulseAnimation} 5s infinite; 
+  animation: ${pulseAnimation} 5s infinite;
 `;
 
 const Right = styled.div`
@@ -142,33 +163,25 @@ const Intro = forwardRef((props, introRef) => {
     <Section ref={introRef}>
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+          <Title>Innovate. Integrate. <span>Inspire.</span></Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtitle>What we Do</Subtitle>
+            <Subtitle>Tworzymy Witryny Zintegrowane z Przyszłością</Subtitle>
           </WhatWeDo>
           <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
-          </Desc>
-          <Button>Porozmawiajmy...</Button>
+  W Creaitive tworzymy futurystyczne <span>witryny internetowe</span>, 
+  budujemy narzędzia oparte na <span>sztucznej inteligencji</span>, które pomagają w automatyzacji procesów w twojej firmie.
+  Tworzymy treści <span>marketingowe</span>, które przyciągają klientów,
+  dzięki czemu ty oszczędzasz <span>czas</span> i <span>pieniądze</span>.
+</Desc>
+
+
+          <Button>Zobacz naszą ofertę</Button>
         </Left>
         <Right>
-          {/* <Canvas>
-              <Suspense fallback={null}>
-                <OrbitControls enableZoom={false} />
-                <ambientLight intensity={1} />
-                <directionalLight position={[3, 2, 1]} />
-                <Sphere args={[1, 100, 200]} scale={2.4}>
-                  <MeshDistortMaterial
-                    color="#3d1c56"
-                    attach="material"
-                    distort={0.5}
-                    speed={2}
-                  />
-                </Sphere>
-              </Suspense>
-            </Canvas> */}
-          <Img src="./img/moon.png" />
+<CanvasBlob/>
+<Img src="./img/Creaitive_logo.jpg" />
+
         </Right>
       </Container>
     </Section>
@@ -176,4 +189,3 @@ const Intro = forwardRef((props, introRef) => {
 });
 
 export default Intro;
-

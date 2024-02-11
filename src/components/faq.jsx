@@ -75,7 +75,8 @@ const Summary = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #da4ea2;
+  background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+ color: white;
   color: white;
   border-radius: 10px; // Add this line
 `;
@@ -87,7 +88,7 @@ const DropdownIcon = styled.div`
 const Answer = styled.div`
   display: ${(props) => (props.open ? 'block' : 'none')};
   padding: 10px;
-  background-color: #3d1c56;
+  background-color: #29075B;
   border-radius: 10px; // Add this line
 `;
 
@@ -97,7 +98,7 @@ const Faq = forwardRef((props, ref) => {
   const faqItems = [
     {
       question: "What is the meaning of life?",
-      answer: "Answer 1: 42.",
+      answer: "Answer 1: 42 asfasfsafa.",
     },
     {
       question: "How to use styled components in React?",
