@@ -54,6 +54,10 @@ span {
 
   margin-bottom: 5px;
   text-align: left;
+
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const Link = styled.a`
@@ -61,6 +65,9 @@ font-size: 16px;
 color: lightgray;
   text-decoration: none;
   margin: 5px 0;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const Footer = () => {

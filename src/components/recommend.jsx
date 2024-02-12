@@ -34,10 +34,10 @@ const RecommendsSection = styled.div`
   overflow: hidden; /* Ensure overflow is hidden to hide the content outside the container */
 
   @media only screen and (max-width: 768px) {
-    height: 120vh; /* Adjust the height for smaller screens */
-    flex-direction: column;
+    height: 10vh; /* Adjust the height for smaller screens */
   }
 `;
+//flex-direction: column;
 
 const RecommendationContainer = styled.div`
   display: flex;
