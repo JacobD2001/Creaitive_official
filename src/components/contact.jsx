@@ -6,8 +6,11 @@ import Map from "./API_Components/Map";
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  @media only screen and (max-width: 768px) {
+    margin-top: 800px;
+  }
 `;
-
+//in section margin top idk if it's responsive XD
 const Container = styled.div`
   width: 100%;
   height: 100%;

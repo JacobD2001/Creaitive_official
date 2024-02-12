@@ -26,6 +26,10 @@ const Section = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 300;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 800px;
+  }
 `;
 
 const Container = styled.div`
@@ -40,15 +44,27 @@ const Container = styled.div`
   }
 `;
 
+// const Right = styled.div`
+//   flex: 2;
+//   display: flex;
+//   align-items: center;
+//   gap: 20px;
+
+//   @media only screen and (max-width: 768px) {
+//     flex: 1;
+//     align-items: center;
+//     flex-direction: column;
+
+//   }
+// `;
+
 const Right = styled.div`
   flex: 2;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
+  position: relative;
   @media only screen and (max-width: 768px) {
     flex: 1;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
   }
 `;
 
@@ -100,12 +116,28 @@ const ListItem = styled.li`
   }
 `;
 
+// const Left = styled.div`
+//   flex: 2;
+//   position: relative;
+//   @media only screen and (max-width: 768px) {
+//     flex: 1;
+//     width: 100%;
+//     flex-direction: column;
+
+//   }
+// `;
 const Left = styled.div`
-  flex: 2;
-  position: relative;
+  flex: 2;  
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
   @media only screen and (max-width: 768px) {
     flex: 1;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
   }
 `;
 

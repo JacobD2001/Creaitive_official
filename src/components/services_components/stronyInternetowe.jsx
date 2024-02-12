@@ -29,7 +29,14 @@ const WorkComponentContainer = styled.div`
   text-align: center;
   align-items: center;
 
+
+
+
 `;
+
+
+//  z-index: 2; // Add this line 53
+
 
 const KeyPointsContainer = styled.div`
   display: grid;
@@ -38,7 +45,6 @@ const KeyPointsContainer = styled.div`
   gap: 20px;
   width: 100%;
   margin-top: 70px;
-  z-index: 2; // Add this line
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr; // Switch to a single column layout
@@ -53,9 +59,10 @@ const KeyPointColumn = styled.div`
 
   @media only screen and (min-width: 769px) {
     flex-basis: calc(50% - 10px); // Reapply for larger screens
-  }
+ }
 `;
 
+//button   z-index: 2;
 
 const Button = styled.button`
   background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
@@ -69,7 +76,6 @@ const Button = styled.button`
   cursor: pointer;
   display: block;
   animation: ${pulseAnimation} 5s infinite;
-  z-index: 2;
 
   @media only screen and (max-width: 768px) {
     width: 200px;
@@ -106,12 +112,6 @@ const Subtitle = styled.h2`
   color: lightgray;
 `;
 
-const StyledCanvas = styled(Canvas)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0; // Set z-index to 0 to place it behind the text and button
-`;
 
 const StronyInternetowe = () => {
   return (

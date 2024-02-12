@@ -38,18 +38,26 @@ const KeyPointsContainer = styled.div`
   width: 100%;
   margin-top: 70px;
   z-index: 2; // Add this line
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr; // Switch to a single column layout
+  }
 `;
 
 const KeyPointColumn = styled.div`
-  flex-basis: calc(50% - 10px);
+flex-basis: 100%; // Take up full width on smaller screens
   padding: 0 10px;
   font-size: 20px;
   margin-bottom: 20px;
+
+  @media only screen and (min-width: 769px) {
+    flex-basis: 100%; // Take up full width on smaller screens // Reapply for larger screens
+  }
 `;
 
 const Button = styled.button`
-background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
-color: white;
+  background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+  color: white;
   font-weight: 700;
   width: 200px;
   height: 50px;
@@ -57,10 +65,19 @@ color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: auto; // Add this line to center the button
-  display: block; // Add this line to center the button
+  display: block;
   animation: ${pulseAnimation} 5s infinite;
-  z-index: 2; // Add this line
+  z-index: 2;
+
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    margin: 20px auto; // Adjust margin for vertical spacing on smaller screens
+  }
+
+  @media only screen and (min-width: 769px) {
+    grid-column: span 2; // Span 2 columns
+    margin: 20px auto; // Center the button between the columns
+  }
 `;
 
 const Title = styled.h1`
@@ -89,7 +106,7 @@ const DigitalPresence = () => {
   return (
     <WorkComponentContainer>
       <KeyPointsContainer>
-        <KeyPointColumn style={{ gridArea: "1 / 1 / span 1 / span 1" }}>
+        <KeyPointColumn>
           {/* Key Point 1 */}
           <Title>X </Title>
           <Subtitle>
@@ -98,7 +115,7 @@ const DigitalPresence = () => {
         </KeyPointColumn>
 
         <KeyPointColumn
-          style={{ gridArea: "1 / 2 / span 1 / span 1" }}
+          
         >
           {/* Key Point 2 */}
           <Title>X</Title>
@@ -107,7 +124,7 @@ const DigitalPresence = () => {
           </Subtitle>
         </KeyPointColumn>
 
-        <KeyPointColumn style={{ gridArea: "2 / 1 / span 1 / span 1" }}>
+        <KeyPointColumn >
           {/* Key Point 3 */}
           <Title> X</Title>
           <Subtitle>
@@ -115,7 +132,7 @@ const DigitalPresence = () => {
           </Subtitle>
         </KeyPointColumn>
 
-        <KeyPointColumn style={{ gridArea: "2 / 2 / span 1 / span 1" }}>
+        <KeyPointColumn>
           {/* Key Point 3 */}
           <Title>X</Title>
           <Subtitle>
@@ -123,7 +140,7 @@ const DigitalPresence = () => {
           </Subtitle>
         </KeyPointColumn>
 
-        <Button style={{ gridArea: "3 /1 / span 1/ span 2" }}>
+        <Button>
           Porozmawiajmy
         </Button>
       </KeyPointsContainer>

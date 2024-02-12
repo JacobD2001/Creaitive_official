@@ -57,7 +57,9 @@ const Left = styled.div`
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    flex-direction: column;
+
   }
 `;
 
@@ -117,6 +119,7 @@ const Right = styled.div`
   position: relative;
   @media only screen and (max-width: 768px) {
     flex: 1;
+    flex-direction: column;
     width: 100%;
   }
 `;
