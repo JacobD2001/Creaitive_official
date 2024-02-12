@@ -44,6 +44,7 @@ const Container = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
+    gap: 0px;
   }
 `;
 
@@ -56,6 +57,7 @@ const Left = styled.div`
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
+    justify-content: center
   }
 `;
 
@@ -76,7 +78,7 @@ const ListItem = styled.li`
   position: relative;
 
   @media only screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 30px;
     color: white;
     -webkit-text-stroke: 0px;
   }

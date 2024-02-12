@@ -15,12 +15,11 @@ Libraries to install
 //TO DO:
 Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/youtube23/blob/3d-portfolio/src/components/WebDesign.jsx
 
-1. Dostosować biznesowo services
-2. Dostosować pod odpowiedniego maila mailing service
-3. Pozamieniać zdjęcia - na końcu
-4. Zabawa z css typu buttony animacje itd
-5. Dodać modele 3d
-6. Fix animacja css reccommend
+1. Responsive horizontally
+2. Podmieniać zdjęcia
+3. Dodać pozostałe komponenty w services/packages
+4. Podpiąć przyciski formy i backend
+5. Dopieścić
 
 FLOW: 
 

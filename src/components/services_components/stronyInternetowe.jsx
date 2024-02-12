@@ -23,11 +23,12 @@ const WorkComponentContainer = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  height: 100%
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
+
 `;
 
 const KeyPointsContainer = styled.div`
@@ -38,18 +39,27 @@ const KeyPointsContainer = styled.div`
   width: 100%;
   margin-top: 70px;
   z-index: 2; // Add this line
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr; // Switch to a single column layout
+  }
 `;
 
 const KeyPointColumn = styled.div`
-  flex-basis: calc(50% - 10px);
+  flex-basis: 100%; // Change to 100% to take full width
   padding: 0 10px;
   font-size: 20px;
   margin-bottom: 20px;
+
+  @media only screen and (min-width: 769px) {
+    flex-basis: calc(50% - 10px); // Reapply for larger screens
+  }
 `;
 
+
 const Button = styled.button`
-background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
-color: white;
+  background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+  color: white;
   font-weight: 700;
   width: 200px;
   height: 50px;
@@ -57,11 +67,22 @@ color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: auto; // Add this line to center the button
-  display: block; // Add this line to center the button
+  display: block;
   animation: ${pulseAnimation} 5s infinite;
-  z-index: 2; // Add this line
+  z-index: 2;
+
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    margin: 20px auto; // Adjust margin for vertical spacing on smaller screens
+  }
+
+  @media only screen and (min-width: 769px) {
+    grid-column: span 2; // Span 2 columns
+    margin: 20px auto; // Center the button between the columns
+  }
 `;
+
+
 
 const Title = styled.h1`
   font-size: 35px;
@@ -91,6 +112,66 @@ const StyledCanvas = styled(Canvas)`
   left: 0;
   z-index: 0; // Set z-index to 0 to place it behind the text and button
 `;
+
+const StronyInternetowe = () => {
+  return (
+    <WorkComponentContainer>
+      {/* <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
+        <Suspense fallback={null} >
+        <Stage environment="city" intensity={0.6}>
+          <Console />
+        </Stage>
+        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={50} />
+        </Suspense>
+      </Canvas> */}
+      <KeyPointsContainer>
+        <KeyPointColumn>
+          {/* Key Point 1 */}
+          <Title>Projekt </Title>
+          <Subtitle>
+            Wykonamy projekt strony internetowej szyty na miarę twojego biznesu
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn
+         
+        >
+          {/* Key Point 2 */}
+          <Title>Funkcjonalność</Title>
+          <Subtitle>
+            Sprawimy aby twoja strona internetowa była w pełni funkcjonalna
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn>
+          {/* Key Point 3 */}
+          <Title>Personalizacja</Title>
+          <Subtitle>
+            Dostosujemy funkcjonalność witryny internetowej w pełni do twoich
+            potrzeb
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn >
+          {/* Key Point 3 */}
+          <Title>Responsywność</Title>
+          <Subtitle>
+            Stworzymy w pełni responsywną stronę, dopasowaną do każdego
+            urządzenia
+          </Subtitle>
+        </KeyPointColumn>
+
+        <Button>
+          Porozmawiajmy
+        </Button>
+      </KeyPointsContainer>
+
+      {/* Call to Action Button */}
+    </WorkComponentContainer>
+  );
+};
+export default StronyInternetowe;
+
 
 //experiment with animation for text
 // const fadeInAnimation = keyframes`
@@ -140,65 +221,4 @@ const StyledCanvas = styled(Canvas)`
 // `;
 
 
-
-
-
-const StronyInternetowe = () => {
-  return (
-    <WorkComponentContainer>
-      {/* <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
-        <Suspense fallback={null} >
-        <Stage environment="city" intensity={0.6}>
-          <Console />
-        </Stage>
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={50} />
-        </Suspense>
-      </Canvas> */}
-      <KeyPointsContainer>
-        <KeyPointColumn style={{ gridArea: "1 / 1 / span 1 / span 1" }}>
-          {/* Key Point 1 */}
-          <Title>Projekt </Title>
-          <Subtitle>
-            Wykonamy projekt strony internetowej szyty na miarę twojego biznesu
-          </Subtitle>
-        </KeyPointColumn>
-
-        <KeyPointColumn
-          style={{ gridArea: "1 / 2 / span 1 / span 1" }}
-        >
-          {/* Key Point 2 */}
-          <Title>Funkcjonalność</Title>
-          <Subtitle>
-            Sprawimy aby twoja strona internetowa była w pełni funkcjonalna
-          </Subtitle>
-        </KeyPointColumn>
-
-        <KeyPointColumn style={{ gridArea: "2 / 1 / span 1 / span 1" }}>
-          {/* Key Point 3 */}
-          <Title>Personalizacja</Title>
-          <Subtitle>
-            Dostosujemy funkcjonalność witryny internetowej w pełni do twoich
-            potrzeb
-          </Subtitle>
-        </KeyPointColumn>
-
-        <KeyPointColumn style={{ gridArea: "2 / 2 / span 1 / span 1" }}>
-          {/* Key Point 3 */}
-          <Title>Responsywność</Title>
-          <Subtitle>
-            Stworzymy w pełni responsywną stronę, dopasowaną do każdego
-            urządzenia
-          </Subtitle>
-        </KeyPointColumn>
-
-        <Button style={{ gridArea: "3 /1 / span 1/ span 2" }}>
-          Porozmawiajmy
-        </Button>
-      </KeyPointsContainer>
-
-      {/* Call to Action Button */}
-    </WorkComponentContainer>
-  );
-};
-export default StronyInternetowe;
 

@@ -36,6 +36,7 @@ const Container = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
+    gap: 0px;
   }
 `;
 
@@ -67,7 +68,7 @@ const ListItem = styled.li`
   position: relative;
 
   @media only screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 30px;
     color: white;
     -webkit-text-stroke: 0px;
   }
@@ -98,7 +99,6 @@ const ListItem = styled.li`
     }
   }
 `;
-
 
 const Left = styled.div`
   flex: 2;
