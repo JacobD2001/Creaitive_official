@@ -28,7 +28,7 @@ const Section = styled.div`
   font-weight: 300;
 
   @media only screen and (max-width: 768px) {
-    margin-top: 800px;
+    margin-top: 300%;
     scroll-snap-align: none;
 
 

@@ -22,6 +22,10 @@ Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/
 5. Podpiąć przyciski formy i backend
 6. Dopieścić
 
+//TO DO ISSUES:
+1. CSS navbara
+2. Menu clicking nie jest responsive - gdzieś jest issue z responsivness services i packages źle się skalują, margains przy 320 procent są git ale dociągamy do 420 i już są wielkie przy 728 to praktycznie cała giga strona Xd - to fix
+
 FLOW: 
 
 Dokładna oferta z opisami żeby miało ręce i nogi -> Komponenty w services -> Teksty home page pozmieniać -> Dodać zdjęcia i modele 3d homepage -> naprawić bugi -> pobawić się więcej cssesem na home pagu - 8.02
