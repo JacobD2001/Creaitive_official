@@ -11,6 +11,10 @@ const FooterSection = styled.footer`
   text-align: center;
   scroll-snap-align: center;
 
+  @media only screen and (max-width: 768px) {
+    scroll-snap-align: none;
+  }
+
 `;
 
 const Separator = styled.hr`

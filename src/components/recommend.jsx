@@ -35,6 +35,8 @@ const RecommendsSection = styled.div`
 
   @media only screen and (max-width: 768px) {
     height: 10vh; /* Adjust the height for smaller screens */
+    scroll-snap-align: none;
+
   }
 `;
 //flex-direction: column;

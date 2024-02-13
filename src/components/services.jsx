@@ -34,6 +34,14 @@ const Section = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 300;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    gap: 0px;
+    scroll-snap-align: none;
+
+  }
 `;
 
 const Container = styled.div`

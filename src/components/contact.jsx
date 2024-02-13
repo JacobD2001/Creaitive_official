@@ -8,6 +8,7 @@ const Section = styled.div`
   scroll-snap-align: center;
   @media only screen and (max-width: 768px) {
     margin-top: 800px;
+    scroll-snap-align: none;
   }
 `;
 //in section margin top idk if it's responsive XD
