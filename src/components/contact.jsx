@@ -7,7 +7,7 @@ const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   @media only screen and (max-width: 768px) {
-    margin-top: 800px;
+    margin-top: 200px;
     scroll-snap-align: none;
   }
 `;
@@ -18,6 +18,12 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
 `;
 
 const Left = styled.div`
@@ -26,7 +32,14 @@ const Left = styled.div`
   align-items: center;
   justify-content: flex-end;
   @media only screen and (max-width: 768px) {
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  text-align: center;
+  z-index: 100;
   }
 `;
 
@@ -69,23 +82,23 @@ const TextArea = styled.textarea`
   background-color: #e8e6e6;
 `;
 
-const confettiAnimation = keyframes`
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  100% {
-    transform: translateY(-100vh) rotate(360deg);
-  }
-`;
+// const confettiAnimation = keyframes`
+//   0% {
+//     transform: translateY(0) rotate(0);
+//   }
+//   100% {
+//     transform: translateY(-100vh) rotate(360deg);
+//   }
+// `;
 
-const ConfettiParticle = styled.div`
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #cecd24;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  animation: ${confettiAnimation} 1s ease-out infinite;
-`;
+// const ConfettiParticle = styled.div`
+//   position: absolute;
+//   width: 10px;
+//   height: 10px;
+//   background-color: #cecd24;
+//   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+//   animation: ${confettiAnimation} 1s ease-out infinite;
+// `;
 
 const Button = styled.button`
   position: relative;
@@ -149,10 +162,19 @@ color: white;
 
 const Right = styled.div`
   flex: 1;
-
   @media only screen and (max-width: 768px) {
-    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    width: 100%; /* Fill entire width */
+    height: 100%; /* Fill entire height */
+    z-index: 1;
   }
+
 `;
 
 // const Button = styled.button`

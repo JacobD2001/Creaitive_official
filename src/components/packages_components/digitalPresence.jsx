@@ -106,37 +106,39 @@ const DigitalPresence = () => {
   return (
     <WorkComponentContainer>
       <KeyPointsContainer>
-        <KeyPointColumn>
+      <KeyPointColumn>
           {/* Key Point 1 */}
-          <Title>X </Title>
+          <Title>Projekt </Title>
           <Subtitle>
-            XXX
+            Wykonamy projekt strony internetowej szyty na miarę twojego biznesu
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn
-          
+         
         >
           {/* Key Point 2 */}
-          <Title>X</Title>
+          <Title>Funkcjonalność</Title>
           <Subtitle>
-            XXX
+            Sprawimy aby twoja strona internetowa była w pełni funkcjonalna
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn>
+          {/* Key Point 3 */}
+          <Title>Personalizacja</Title>
+          <Subtitle>
+            Dostosujemy funkcjonalność witryny internetowej w pełni do twoich
+            potrzeb
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn >
           {/* Key Point 3 */}
-          <Title> X</Title>
+          <Title>Responsywność</Title>
           <Subtitle>
-            XXX
-          </Subtitle>
-        </KeyPointColumn>
-
-        <KeyPointColumn>
-          {/* Key Point 3 */}
-          <Title>X</Title>
-          <Subtitle>
-            XXX
+            Stworzymy w pełni responsywną stronę, dopasowaną do każdego
+            urządzenia
           </Subtitle>
         </KeyPointColumn>
 

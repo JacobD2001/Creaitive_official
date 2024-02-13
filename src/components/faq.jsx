@@ -11,8 +11,8 @@ const FaqSection = styled.div`
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr; /* Single column for smaller screens */
-    height: 120vh; /* Adjust the height for smaller screens */
     scroll-snap-align: none;
+    margin-top: -220px;
 
   }
 `;

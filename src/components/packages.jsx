@@ -31,6 +31,9 @@ const Section = styled.div`
     margin-top: 800px;
     scroll-snap-align: none;
 
+
+    flex-direction: column;
+
   }
 `;
 
@@ -56,21 +59,9 @@ const Right = styled.div`
     flex: 1;
     align-items: center;
     flex-direction: column;
-
+    order: 1;
   }
 `;
-
-// const Right = styled.div`
-//   flex: 2;
-//   position: relative;
-//   align-items: center;
-//   gap: 20px;
-//   @media only screen and (max-width: 768px) {
-//     flex: 1;
-//     flex-direction: column;
-//     width: 100%;
-//   }
-// `;
 
 const List = styled.ul`
   list-style: none;
@@ -128,8 +119,23 @@ const Left = styled.div`
     width: 100%;
     flex-direction: column;
 
+    order: 2; /* Change the order on smaller screens */
+    justify-content: center;
+
   }
 `;
+
+// const SectionName = styled.h2`
+
+//   font-size: 24px;
+//   font-weight: bold;
+//   margin-bottom: 10px;
+//   color: white;
+//   writing-mode: vertical-rl; /* Vertical writing mode */
+//   transform: rotate(180deg); /* Rotate the text 180 degrees to make it vertical */
+
+// `;
+
 // const Left = styled.div`
 //   flex: 2;  
 //   display: flex;
@@ -150,7 +156,6 @@ const packagesMapComponent = {
   "Pakiet Digital Presence": DigitalPresence,
   "Pakiet Full Comfort": fullComfort,
   "Pakiet Business Influence": BusinessInfluence,
-
   "Pakiet Business Automation": BusinessAutomation,
 };
 
@@ -173,6 +178,8 @@ const Packages = forwardRef((props, ref) => {
               </ListItem>
             ))}
           </List>
+          {/* <SectionName>Pakiety</SectionName> */}
+
         </Right>
       </Container>
     </Section>

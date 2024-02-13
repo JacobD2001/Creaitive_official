@@ -183,8 +183,8 @@ const Intro = forwardRef((props, introRef) => {
           <Button>Zobacz naszą ofertę</Button>
         </Left>
         <Right>
-<CanvasBlob/>
-{/* <Img src="./img/moon.png" /> */}
+{/* <CanvasBlob/> */}
+<Img src="./img/moon.png" />
 
         </Right>
       </Container>
