@@ -1,8 +1,5 @@
-import React, {Suspense} from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
-import { Canvas } from "@react-three/fiber";
-//import { OrbitControls, Stage } from "@react-three/drei";
-//import Console from "../3d_models/console";
 
 const pulseAnimation = keyframes`
   0% {
@@ -28,15 +25,7 @@ const WorkComponentContainer = styled.div`
   justify-content: center;
   text-align: center;
   align-items: center;
-
-
-
-
 `;
-
-
-//  z-index: 2; // Add this line 53
-
 
 const KeyPointsContainer = styled.div`
   display: grid;
@@ -62,8 +51,6 @@ const KeyPointColumn = styled.div`
  }
 `;
 
-//button   z-index: 2;
-
 const Button = styled.button`
   background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
   color: white;
@@ -87,8 +74,6 @@ const Button = styled.button`
     margin: 20px auto; // Center the button between the columns
   }
 `;
-
-
 
 const Title = styled.h1`
   font-size: 35px;
@@ -116,14 +101,7 @@ const Subtitle = styled.h2`
 const StronyInternetowe = () => {
   return (
     <WorkComponentContainer>
-      {/* <Canvas style={{ position: "absolute", top: 0, left: 0 }}>
-        <Suspense fallback={null} >
-        <Stage environment="city" intensity={0.6}>
-          <Console />
-        </Stage>
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={50} />
-        </Suspense>
-      </Canvas> */}
+
       <KeyPointsContainer>
         <KeyPointColumn>
           {/* Key Point 1 */}
@@ -171,54 +149,5 @@ const StronyInternetowe = () => {
   );
 };
 export default StronyInternetowe;
-
-
-//experiment with animation for text
-// const fadeInAnimation = keyframes`
-//   to {
-//     opacity: 1;
-//     filter: blur(0);
-//   }
-// `;
-
-
-// const AnimatedTitle = styled(Title)`
-//   ::after {
-//     content: "${(props) => props.children}";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     color: pink;
-//     width: 0px;
-//     overflow: hidden;
-//     white-space: nowrap;
-//   }
-
-//   &:hover {
-//     ::after {
-//       animation: ${fadeInAnimation} 0.8s linear both;
-//     }
-//   }
-// `;
-
-// const AnimatedSubtitle = styled(Subtitle)`
-//   ::after {
-//     content: "${(props) => props.children}";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     color: pink;
-//     width: 0px;
-//     overflow: hidden;
-//     white-space: nowrap;
-//   }
-
-//   &:hover {
-//     ::after {
-//       animation: ${fadeInAnimation} 0.8s linear both;
-//     }
-//   }
-// `;
-
 
 

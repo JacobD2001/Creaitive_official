@@ -34,6 +34,7 @@ const Section = styled.div`
     scroll-snap-align: none;
 
   }
+
 `;
 
 const Container = styled.div`

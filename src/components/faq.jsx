@@ -48,16 +48,12 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-
-  @media only screen and (max-width: 768px) {
-    flex: 1;
-    align-items: center;
-  }
+flex: 3;
+position: relative;
+@media only screen and (max-width: 768px) {
+  flex: 1;
+  width: 100%;
+}
 `;
 
 const Right = styled.div`
@@ -95,6 +91,28 @@ const Answer = styled.div`
   background-color: #29075B;
   border-radius: 10px; // Add this line
 `;
+const Img = styled.img`
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+
+  @media only screen and (max-width: 768px) {
+   display: none;
+  }
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
 
 const Faq = forwardRef((props, ref) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -130,7 +148,10 @@ const Faq = forwardRef((props, ref) => {
   return (
     <FaqSection ref={ref}>
       <Container>
-        <Left>{/* Content for the left column goes here */}</Left>
+        <Left>
+        <Img src="./img/moon.png" />
+
+          </Left>
         <Right>
           <Title>Masz pytanie?</Title>
           <FaqContent>

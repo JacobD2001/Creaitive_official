@@ -15,7 +15,7 @@ Libraries to install
 //TO DO:
 Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/youtube23/blob/3d-portfolio/src/components/WebDesign.jsx
 
-1. Responsive horizontally, and test every aspect of responsivness
+1. Responsive horizontally, and test every aspect of responsivness - TO FIX not working correctly.
 2. Podmieniać zdjęcia
 3. Refactor codu
 4. Dodać pozostałe komponenty w services/packages
