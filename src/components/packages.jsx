@@ -30,10 +30,7 @@ const Section = styled.div`
   @media only screen and (max-width: 768px) {
     margin-top: 300%;
     scroll-snap-align: none;
-
-
     flex-direction: column;
-
   }
 `;
 
@@ -89,7 +86,17 @@ const ListItem = styled.li`
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
+    background: linear-gradient(
+      45deg,
+      #de2fac,
+      #d73aae,
+      #d335b0,
+      #c82bb1,
+      #b821b2,
+      #ab17b3,
+      #9f0db4,
+      #9303b5
+    );
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
@@ -121,7 +128,6 @@ const Left = styled.div`
 
     order: 2; /* Change the order on smaller screens */
     justify-content: center;
-
   }
 `;
 
@@ -137,7 +143,7 @@ const Left = styled.div`
 // `;
 
 // const Left = styled.div`
-//   flex: 2;  
+//   flex: 2;
 //   display: flex;
 //   align-items: center;
 //   gap: 20px;
@@ -179,7 +185,6 @@ const Packages = forwardRef((props, ref) => {
             ))}
           </List>
           {/* <SectionName>Pakiety</SectionName> */}
-
         </Right>
       </Container>
     </Section>

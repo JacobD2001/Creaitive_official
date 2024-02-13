@@ -1,28 +1,6 @@
 import React, { forwardRef } from "react";
 import styled, { keyframes } from 'styled-components';
-
-// Define the keyframe animation
-const moveLeftToRight = keyframes`
-  0% {
-    transform: translateX(-100%);
-    opacity: 1; // Start with the element fully visible
-  }
-
-  50% {
-    transform: translateX(100%);
-    opacity: 0; // Fade out halfway through the animation
-  }
-
-  51% {
-    transform: translateX(100%);
-    opacity: 0; // Keep the element on the right side and invisible
-  }
-
-  100% {
-    transform: translateX(-100%);
-    opacity: 1; // Move the element to the left and fade it back in
-  }
-`;
+import { moveLeftToRightAnimation } from "./styled_components/animations";
 
 const RecommendsSection = styled.div`
   height: 110px; /* Adjust the height as needed */
@@ -39,14 +17,13 @@ const RecommendsSection = styled.div`
 
   }
 `;
-//flex-direction: column;
 
 const RecommendationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  animation: ${moveLeftToRight} 8s linear infinite; /* Adjust the duration and timing function as needed */
+  animation: ${moveLeftToRightAnimation} 8s linear infinite; /* Adjust the duration and timing function as needed */
 `;
 
 const Logo = styled.img`
@@ -88,13 +65,6 @@ const Recommend = forwardRef((props, ref) => {
                   <Text>AngryBunny</Text>
               </StyledLink>
           </RecommendationContainer>
-          {/* <RecommendationContainer>
-              <StyledLink href="https://example.com" target="_blank" rel="noopener noreferrer">
-                  <Logo src="./img/search.png" alt="Company 3" />
-                  <Text>Company 3</Text>
-              </StyledLink>
-          </RecommendationContainer> */}
-          {/* Add more logos and text as needed */}
       </RecommendsSection>
   );
 });

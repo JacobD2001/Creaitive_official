@@ -1,9 +1,6 @@
-import React, { useState, forwardRef, Suspense } from "react";
+import React, { useState, forwardRef} from "react";
 import styled from "styled-components";
-// import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
-// import { Canvas } from "@react-three/fiber";
 import CanvasBlob from "./3d_models/CanvasBlob";
-
 
 //import services components
 import WirtualniInfluencerzy from "./services_components/wirtualniInfluencerzy";
@@ -14,7 +11,6 @@ import Chatboty from "./services_components/chatboty";
 import KrotkieVideo from "./services_components/krotkieVideo";
 import StronyInternetowe from "./services_components/stronyInternetowe";
 
-// TO DO: Adjust 'data' based on business needs
 const data = [
   "Strony Internetowe",
   "Chatboty", 
@@ -79,7 +75,6 @@ const List = styled.ul`
   gap: 20px;
 `;
 
-//#da4ea2 - rozowy
 const ListItem = styled.li`
   font-size: 50px;
   font-weight: bold;
@@ -121,8 +116,6 @@ const ListItem = styled.li`
   }
 `;
 
-
-
 const Right = styled.div`
   flex: 2;
   position: relative;
@@ -133,7 +126,6 @@ const Right = styled.div`
   }
 `;
 
-//component to map
 const servicesMapComponent = {
   "Strony Internetowe": StronyInternetowe,
   "Chatboty": Chatboty,
