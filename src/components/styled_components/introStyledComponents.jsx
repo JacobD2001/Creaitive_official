@@ -1,4 +1,3 @@
-import React, { forwardRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { pulseAnimation, moveUpAndDownAnimation } from "./animations";
 
