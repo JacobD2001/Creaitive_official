@@ -166,6 +166,7 @@ const packagesMapComponent = {
 };
 
 const Packages = forwardRef((props, ref) => {
+  const { contactRef } = props;
   const [work, setWork] = useState(data[0]);
   const WorkComponent = packagesMapComponent[work];
 
@@ -174,7 +175,7 @@ const Packages = forwardRef((props, ref) => {
       <Container>
         <Left>
           <CanvasBlob />
-          <WorkComponent />
+          <WorkComponent contactRef={contactRef} />
         </Left>
         <Right>
           <List>

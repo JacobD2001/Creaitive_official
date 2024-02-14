@@ -239,7 +239,7 @@ const Contact = forwardRef((props, forwardedRef) => {
         <Left>
           <Form ref={formRef} onSubmit={handleSubmit}>
             <Title>
-              ZADZWOŃ <span>606 704 195</span> LUB WYPEŁNIJ FORMULARZ
+              ZADZWOŃ <span>693 780 340</span> LUB WYPEŁNIJ FORMULARZ
             </Title>
             <Input placeholder="Imię" name="name" />
             <Input placeholder="Email" name="email" />

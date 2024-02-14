@@ -1,8 +1,5 @@
 import React, {Suspense} from "react";
 import styled, { keyframes } from "styled-components";
-import { Canvas } from "@react-three/fiber";
-//import { OrbitControls, Stage } from "@react-three/drei";
-//import Console from "../3d_models/console";
 
 const pulseAnimation = keyframes`
   0% {
@@ -102,7 +99,14 @@ const Subtitle = styled.h2`
   color: lightgray;
 `;
 
-const DigitalPresence = () => {
+const DigitalPresence = ({contactRef}) => {
+
+  const scrollToContact = () => {
+    if (contactRef && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <WorkComponentContainer>
       <KeyPointsContainer>
@@ -142,9 +146,7 @@ const DigitalPresence = () => {
           </Subtitle>
         </KeyPointColumn>
 
-        <Button>
-          Porozmawiajmy
-        </Button>
+          <Button onClick={() => scrollToContact(contactRef)}>Porozmawiajmy</Button>
       </KeyPointsContainer>
 
       {/* Call to Action Button */}
