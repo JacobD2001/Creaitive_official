@@ -15,6 +15,14 @@ import {
 import CanvasBlob from "./3d_models/CanvasBlob";
 
 const Intro = forwardRef((props, introRef) => {
+  const { servicesRef } = props;
+
+  const scrollToServices = () => {
+    if (servicesRef && servicesRef.current) {
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Section ref={introRef}>
       <Container>
@@ -33,7 +41,7 @@ const Intro = forwardRef((props, introRef) => {
             treści <span>marketingowe</span>, które przyciągają klientów, dzięki
             czemu ty oszczędzasz <span>czas</span> i <span>pieniądze</span>.
           </Desc>
-          <Button>Zobacz naszą ofertę</Button>
+          <Button onClick={() => scrollToServices(servicesRef)}>Zobacz naszą ofertę</Button>
         </Left>
         <Right>
           {/* <CanvasBlob/> */}
