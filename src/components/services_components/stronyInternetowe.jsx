@@ -98,7 +98,14 @@ const Subtitle = styled.h2`
 `;
 
 
-const StronyInternetowe = () => {
+const StronyInternetowe = ({contactRef}) => {
+
+  const scrollToContact = () => {
+    if (contactRef && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <WorkComponentContainer>
 
@@ -139,9 +146,8 @@ const StronyInternetowe = () => {
           </Subtitle>
         </KeyPointColumn>
 
-        <Button>
-          Porozmawiajmy
-        </Button>
+        <Button onClick={() => scrollToContact(contactRef)}>Porozmawiajmy</Button>
+
       </KeyPointsContainer>
 
       {/* Call to Action Button */}

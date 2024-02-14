@@ -137,7 +137,7 @@ const servicesMapComponent = {
 };
 
 const Services = forwardRef((props, ref) => {
-
+  const { contactRef } = props;
   const [work, setWork] = useState(data[0]);
   const WorkComponent = servicesMapComponent[work];
 
@@ -154,8 +154,8 @@ const Services = forwardRef((props, ref) => {
           </List>
         </Left>
         <Right>
-        <CanvasBlob/>
-          <WorkComponent />
+          <CanvasBlob/>
+          <WorkComponent contactRef={contactRef} />
         </Right>
       </Container>
     </Section>
