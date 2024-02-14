@@ -15,12 +15,12 @@ Libraries to install
 //TO DO:
 Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/youtube23/blob/3d-portfolio/src/components/WebDesign.jsx
 
-1. Responsive horizontally, and test every aspect of responsivness - TO FIX not working correctly.
-2. Podmieniać zdjęcia
-3. Refactor codu
-4. Dodać pozostałe komponenty w services/packages
-5. Podpiąć przyciski formy i backend
-6. Dopieścić
+1. Responsive horizontally, and test every aspect of responsivness - TO FIX not working correctly. PRIOR 6
+2. Podmieniać zdjęcia PRIOR 3 
+3. Refactor codu - zrobić reusable componenty te które się da styled, te które nie dodać do kolejnego typu servicesstyled components PRIOR 1 - Czwartek 
+4. Dodać pozostałe komponenty w services/packages PRIOR 2 - czwartek
+5. Dodać biznesowego maila/ cała stopka linki polityka prywatności PRIOR 4
+6. Dopieścić PRIOR 5
 
 //TO DO ISSUES:
 1. CSS navbara

@@ -103,7 +103,8 @@ const TextArea = styled.textarea`
 const Button = styled.button`
   position: relative;
   background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
-color: white;
+  color: white;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
   text-decoration: none;
