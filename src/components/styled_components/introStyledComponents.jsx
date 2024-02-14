@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { pulseAnimation, moveUpAndDownAnimation } from "./animations";
 
-export const Section = styled.div`
+export const IntroSection = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
@@ -15,7 +15,7 @@ export const Section = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const IntroContainer = styled.div`
   height: 100%;
   scroll-snap-align: center;
   width: 1400px;
@@ -31,7 +31,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Left = styled.div`
+export const IntroLeft = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ export const Left = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const IntroTitle = styled.h1`
   font-size: 74px;
 
   span {
@@ -59,24 +59,24 @@ export const Title = styled.h1`
   }
 `;
 
-export const WhatWeDo = styled.div`
+export const IntroWhatWeDo = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
 `;
 
-export const Line = styled.img`
+export const IntroLine = styled.img`
   height: 5px;
 `;
 
-export const Subtitle = styled.h2`
+export const IntroSubtitle = styled.h2`
 background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
 -webkit-background-clip: text;
 color: transparent;
 font-weight: bold;
 `;
 
-export const Desc = styled.p`
+export const IntroDesc = styled.p`
   font-size: 24px;
   margin: 0;
   color: lightgray;
@@ -95,7 +95,7 @@ span {
   }
 `;
 
-export const Button = styled.button`
+export const IntroButton = styled.button`
 background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
 color: white;
   font-weight: 500;
@@ -107,7 +107,7 @@ color: white;
   animation: ${pulseAnimation} 5s infinite;
 `;
 
-export const Right = styled.div`
+export const IntroRight = styled.div`
   flex: 3;
   position: relative;
   @media only screen and (max-width: 768px) {
@@ -116,7 +116,7 @@ export const Right = styled.div`
   }
 `;
 
-export const Img = styled.img`
+export const IntroImg = styled.img`
   width: 800px;
   height: 600px;
   object-fit: contain;
