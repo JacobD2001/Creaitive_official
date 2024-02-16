@@ -73,17 +73,14 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  color: transparent;
-  -webkit-text-stroke: 0.5px white;
   position: relative;
 
   @media only screen and (max-width: 1023px) {
     font-size: 30px;
     color: white;
-    -webkit-text-stroke: 0px;
   }
 
   ::after {

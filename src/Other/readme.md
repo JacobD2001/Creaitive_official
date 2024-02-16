@@ -15,17 +15,17 @@ Libraries to install
 //TO DO:
 Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/youtube23/blob/3d-portfolio/src/components/WebDesign.jsx
 
-1. gdy na mobilce powinno scrollować do workcomponentu jak klikniesz np na 'strony internetowe'
 2. Podmieniać zdjęcia PRIOR 3 
 3. Refactor codu - zrobić reusable componenty te które się da styled, te które nie dodać do kolejnego typu servicesstyled components PRIOR 1 - NAJMNIEJ WAŻNE
 4. Dodać pozostałe komponenty w services/packages PRIOR 2 - czwartek
 5. Dodać biznesowego maila/ cała stopka linki polityka prywatności PRIOR 4
 6. Dopieścić PRIOR 5
 7. Będą potrzebne dodatkowe strony dla każdej usługi(use casy + przykłady, proces z klientem i kontakt)
+8. do zmiany services ta animacja wypełniania
 
 //TO DO ISSUES:
 1. CSS navbara
-2. Menu clicking nie jest responsive - gdzieś jest issue z responsivness services i packages źle się skalują, margains przy 320 procent są git ale dociągamy do 420 i już są wielkie przy 728 to praktycznie cała giga strona Xd - to fix
+2. Menu na mobilce nie scrolluje na sam początek tekstu 
 
 //TO DO IN THE FUTURE:
 1. Responsive for 4K: https://www.geeksforgeeks.org/how-to-target-desktop-tablet-and-mobile-using-media-query/

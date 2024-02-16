@@ -79,17 +79,14 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  color: transparent;
-  -webkit-text-stroke: 0.5px white;
   position: relative;
 
   @media only screen and (max-width: 1023px) {
     font-size: 30px;
     color: white;
-    -webkit-text-stroke: 0px;
   }
 
   ::after {
@@ -97,17 +94,7 @@ const ListItem = styled.li`
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(
-      45deg,
-      #de2fac,
-      #d73aae,
-      #d335b0,
-      #c82bb1,
-      #b821b2,
-      #ab17b3,
-      #9f0db4,
-      #9303b5
-    );
+    background: linear-gradient(45deg, #de2fac, #d73aae, #d335b0, #c82bb1, #b821b2, #ab17b3, #9f0db4, #9303b5);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
@@ -128,6 +115,7 @@ const ListItem = styled.li`
     }
   }
 `;
+
 
 const Left = styled.div`
   flex: 2;
