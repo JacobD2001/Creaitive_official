@@ -8,27 +8,31 @@ export const IntroSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-  @media only screen and (max-width: 768px) {
+    
+  /* Low-Resolution Tablets and iPads and mobiles */
+  @media only screen and (max-width: 1280px) {
     height: 200vh;
     scroll-snap-align: none;
   }
+  
+
 `;
 
 export const IntroContainer = styled.div`
   height: 100%;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     scroll-snap-align: none;
   }
+
 `;
 
 export const IntroLeft = styled.div`
@@ -38,7 +42,7 @@ export const IntroLeft = styled.div`
   justify-content: center;
   gap: 20px;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     flex: 1;
     align-items: center;
   }
@@ -54,7 +58,7 @@ export const IntroTitle = styled.h1`
     font-weight: bold;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     text-align: center;
   }
 `;
@@ -89,7 +93,7 @@ span {
 }
 
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     padding: 20px;
     text-align: center;
   }
@@ -110,15 +114,16 @@ color: white;
 export const IntroRight = styled.div`
   flex: 3;
   position: relative;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     flex: 1;
     width: 100%;
   }
 `;
 
 export const IntroImg = styled.img`
-  width: 800px;
-  height: 600px;
+  width: 80%; 
+  max-width: 800px; 
+  height: auto; 
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -128,8 +133,11 @@ export const IntroImg = styled.img`
   margin: auto;
   animation: ${moveUpAndDownAnimation} 2s infinite ease alternate;
 
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+  /* Low-Resolution Tablets and iPads */
+  @media only screen and (max-width: 1280px) {
+    width: 70%; 
+    max-width: none; 
+    height: auto; 
   }
+  
 `;

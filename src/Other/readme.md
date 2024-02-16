@@ -17,10 +17,11 @@ Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/
 
 1. Responsive horizontally, and test every aspect of responsivness - TO FIX not working correctly. PRIOR 6
 2. Podmieniać zdjęcia PRIOR 3 
-3. Refactor codu - zrobić reusable componenty te które się da styled, te które nie dodać do kolejnego typu servicesstyled components PRIOR 1 - Czwartek 
+3. Refactor codu - zrobić reusable componenty te które się da styled, te które nie dodać do kolejnego typu servicesstyled components PRIOR 1 - NAJMNIEJ WAŻNE
 4. Dodać pozostałe komponenty w services/packages PRIOR 2 - czwartek
 5. Dodać biznesowego maila/ cała stopka linki polityka prywatności PRIOR 4
 6. Dopieścić PRIOR 5
+7. Będą potrzebne dodatkowe strony dla każdej usługi(use casy + przykłady, proces z klientem i kontakt)
 
 //TO DO ISSUES:
 1. CSS navbara
