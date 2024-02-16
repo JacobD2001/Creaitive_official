@@ -142,7 +142,9 @@ export const IntroImg = styled.img`
   /* Low-Resolution Tablets and iPads */
   @media only screen and (max-width: 1280px) {
     width: 70%; 
-    max-width: none; 
+    max-width: 800px; 
+    max-height: 600px; 
+
     height: auto; 
   }
   

@@ -17,33 +17,76 @@ const data = [
   "Pakiet Business Automation",
 ];
 
-const Section = styled.div`
+// const Section = styled.div`
+//   height: 100vh;
+//   scroll-snap-align: center;
+//   display: flex;
+//   justify-content: center;
+//   position: relative;
+//   color: black;
+//   font-size: 14px;
+//   font-weight: 300;
+
+//   @media only screen and (max-width: 1280px) {
+//     width: 100%;
+//     flex-direction: column;
+//     gap: 0px;
+//     scroll-snap-align: none;
+//   }
+// `;
+
+// const Container = styled.div`
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+
+//   @media only screen and (max-width: 1280px) {
+//     width: 100%;
+//     flex-direction: column;
+//     gap: 0px;
+//   }
+// `;
+
+export const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
-  justify-content: center;
-  position: relative;
-  color: black;
-  font-size: 14px;
-  font-weight: 300;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+    
+  /* Low-Resolution Tablets and iPads and mobiles */
 
-  @media only screen and (max-width: 768px) {
-    margin-top: 300%;
+  @media only screen and (max-width: 440px) {
+    margin-top: 200px;
+    height: 200vh;
     scroll-snap-align: none;
-    flex-direction: column;
   }
+
+  @media only screen and (max-width: 1280px) {
+    margin-top: 200px;
+    height: 200vh;
+    scroll-snap-align: none;
+  }
+  
+
 `;
 
-const Container = styled.div`
-  width: 1400px;
+export const Container = styled.div`
+  height: 100%;
+  scroll-snap-align: center;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     width: 100%;
     flex-direction: column;
-    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: none;
   }
+
 `;
 
 const Right = styled.div`
@@ -52,7 +95,7 @@ const Right = styled.div`
   align-items: center;
   gap: 20px;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     flex: 1;
     align-items: center;
     flex-direction: column;
@@ -75,7 +118,7 @@ const ListItem = styled.li`
   -webkit-text-stroke: 0.5px white;
   position: relative;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     font-size: 30px;
     color: white;
     -webkit-text-stroke: 0px;
@@ -121,11 +164,10 @@ const ListItem = styled.li`
 const Left = styled.div`
   flex: 2;
   position: relative;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     flex: 1;
     width: 100%;
     flex-direction: column;
-
     order: 2; /* Change the order on smaller screens */
     justify-content: center;
   }
