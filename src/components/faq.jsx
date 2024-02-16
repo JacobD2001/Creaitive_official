@@ -2,25 +2,24 @@ import React, { forwardRef, useState } from 'react';
 import styled from 'styled-components';
 
 
-const FaqSection = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal-sized columns */
-  height: 100vh; /* Adjust the height as needed */
-  padding: 20px;
-  scroll-snap-align: center;
+// const FaqSection = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr 1fr; /* Two equal-sized columns */
+//   height: 100vh; /* Adjust the height as needed */
+//   padding: 20px;
+//   scroll-snap-align: center;
 
-  @media only screen and (max-width: 768px) {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
-    scroll-snap-align: none;
-    margin-top: -220px;
+//   @media only screen and (max-width: 1280px) {
+//     grid-template-columns: 1fr; /* Single column for smaller screens */
+//     scroll-snap-align: none;
+//   }
 
-  }
-`;
+// `;
 
 const Title = styled.h1`
   font-size: 74px;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     text-align: center;
   }
 `;
@@ -30,27 +29,62 @@ const FaqContent = styled.div`
   margin-top: 20px;
 `;
 
-const Container = styled.div`
+// const Container = styled.div`
+//   height: 100%;
+//   scroll-snap-align: center;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+
+//   @media only screen and (max-width: 1280px) {
+//     width: 100%;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     scroll-snap-align: none;
+
+//   }
+  
+// `;
+
+ const FaqSection = styled.div`
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+    
+  /* Low-Resolution Tablets and iPads and mobiles */
+  @media only screen and (max-width: 1280px) {
+    height: 200vh;
+    scroll-snap-align: none;
+  }
+  
+
+`;
+
+ const Container = styled.div`
   height: 100%;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     scroll-snap-align: none;
-
   }
+
 `;
 
 const Left = styled.div`
-flex: 3;
+flex: 2;
 position: relative;
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   flex: 1;
   width: 100%;
 }
@@ -59,9 +93,9 @@ position: relative;
 const Right = styled.div`
   flex: 3;
   position: relative;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
     flex: 1;
-    width: 100%;
+    width: 80%;
   }
 `;
 
@@ -103,7 +137,7 @@ const Img = styled.img`
   margin: auto;
   animation: animate 2s infinite ease alternate;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1280px) {
    display: none;
   }
 

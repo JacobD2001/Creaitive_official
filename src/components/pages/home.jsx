@@ -42,9 +42,9 @@ function Home() {
       <Services ref={servicesRef} contactRef={contactRef} />
       <Packages ref={packagesRef} contactRef={contactRef}/>
       <Contact ref={contactRef} />
-      {/* <Recommend ref={recommendRef} />
+      <Recommend ref={recommendRef} />
       <FAQ ref={faqRef} />
-      <Footer /> */}
+      {/* <Footer /> */}
     </Container>
   );
 }
