@@ -19,7 +19,7 @@ const data = [
 
 export const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: none; /*na chwile none potem center*/
+  scroll-snap-align: center; /*na chwile none potem center*/
   display: flex;
   flex-direction: column;
   align-items: center;

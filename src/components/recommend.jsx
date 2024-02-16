@@ -8,10 +8,10 @@ const RecommendsSection = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  scroll-snap-align: start;
+  scroll-snap-align: start; /*na chwile none potem start*/
   overflow: hidden; /* Ensure overflow is hidden to hide the content outside the container */
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     scroll-snap-align: none;
   }
 `;
@@ -29,7 +29,7 @@ const Logo = styled.img`
   height: auto;
   margin: 10px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     width: 80px; /* Adjust for smaller screens */
   }
 `;

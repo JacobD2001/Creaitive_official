@@ -43,8 +43,8 @@ function Home() {
       <Packages ref={packagesRef} contactRef={contactRef}/>
       <Contact ref={contactRef} />
       <Recommend ref={recommendRef} />
-      {/* <FAQ ref={faqRef} />
-      <Footer /> */}
+      <FAQ ref={faqRef} />
+      <Footer />
     </Container>
   );
 }

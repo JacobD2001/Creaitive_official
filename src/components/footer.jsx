@@ -9,10 +9,10 @@ const FooterSection = styled.footer`
   height: 30%; /* Adjust the height as needed */
   color: white;
   text-align: center;
-  scroll-snap-align: center;
+  scroll-snap-align: center; /*na chwile none potem center*/
 
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     scroll-snap-align: none;
     margin-top: 50px;
   }
@@ -43,7 +43,7 @@ const BigText = styled.h1`
 font-size: 30px;
 color: white;
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1023px) {
   text-align: center;
 }
 `;
@@ -59,7 +59,7 @@ span {
   margin-bottom: 5px;
   text-align: left;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     text-align: left;
   }
 `;
@@ -69,7 +69,7 @@ font-size: 16px;
 color: lightgray;
   text-decoration: none;
   margin: 5px 0;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     text-align: left;
   }
 `;
