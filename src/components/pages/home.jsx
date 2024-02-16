@@ -41,8 +41,8 @@ function Home() {
       <Intro ref={introRef} servicesRef={servicesRef} />   
       <Services ref={servicesRef} contactRef={contactRef} />
       <Packages ref={packagesRef} contactRef={contactRef}/>
-      {/* <Contact ref={contactRef} />
-      <Recommend ref={recommendRef} />
+      <Contact ref={contactRef} />
+      {/* <Recommend ref={recommendRef} />
       <FAQ ref={faqRef} />
       <Footer /> */}
     </Container>
