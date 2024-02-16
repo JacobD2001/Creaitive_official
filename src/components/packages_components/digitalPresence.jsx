@@ -1,6 +1,6 @@
 import React, {Suspense} from "react";
 import styled, { keyframes } from "styled-components";
-import { pulseAnimation } from "./styled_components/animations";
+//import { pulseAnimation } from "./styled_components/animations";
 
 const WorkComponentContainer = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   display: block;
-  animation: ${pulseAnimation} 5s infinite;
+ /* animation: ${pulseAnimation} 5s infinite; */
   z-index: 2;
 
   @media only screen and (max-width: 768px) {
