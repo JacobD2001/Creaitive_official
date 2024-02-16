@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, Suspense } from "react";
+import React, { useState, forwardRef, Suspense, useRef } from "react";
 import styled from "styled-components";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -164,18 +164,27 @@ const Packages = forwardRef((props, ref) => {
   const { contactRef } = props;
   const [work, setWork] = useState(data[0]);
   const WorkComponent = packagesMapComponent[work];
+  const workRef = useRef(null);
+
+  const handleListItemClick = (item) => {
+    setWork(item);
+    if (window.innerWidth <= 1023) {
+      workRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
 
   return (
     <Section ref={ref}>
       <Container>
-        <Left>
+        <Left ref={workRef}>
           <CanvasBlob />
           <WorkComponent contactRef={contactRef} />
         </Left>
         <Right>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+              <ListItem key={item} text={item} onClick={() => handleListItemClick(item)}>
                 {item}
               </ListItem>
             ))}
