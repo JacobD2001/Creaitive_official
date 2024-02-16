@@ -8,16 +8,18 @@ Source: https://sketchfab.com/3d-models/game-boy-challenge-a91c7818d2aa4331aabb3
 Title: Game Boy Challenge
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+// import React, { useRef } from 'react'
+// import { useGLTF } from '@react-three/drei'
 
-export default function Model(props) {
-  const { nodes, materials } = useGLTF('/console-transformed.glb')
-  return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.GameBoy_GameBoy_Mat_0.geometry} material={materials.GameBoy_Mat} rotation={[-0.208, 0.009, 0.338]} scale={0.006} />
-    </group>
-  )
-}
+// export default function Model(props) {
+//   const { nodes, materials } = useGLTF('/console-transformed.glb')
+//   return (
+//     <group {...props} dispose={null}>
+//       <mesh geometry={nodes.GameBoy_GameBoy_Mat_0.geometry} material={materials.GameBoy_Mat} rotation={[-0.208, 0.009, 0.338]} scale={0.006} />
+//     </group>
+//   )
+// }
 
-useGLTF.preload('/console-transformed.glb')
+// useGLTF.preload('/console-transformed.glb')
+
+//TO REMOVE BEFORE HOSTING

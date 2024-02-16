@@ -21,22 +21,21 @@ const data = [
   "Indywidualne Rozwiązania",
 ];
 
-export const Section = styled.div`
+ const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center; /*na chwile none potem center*/
+  scroll-snap-align: center; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
     
-  /* Low-Resolution Tablets and iPads and mobiles */
   @media only screen and (max-width: 1023px) {
     height: 200vh;
     scroll-snap-align: none;
   }
 `;
 
-export const Container = styled.div`
+ const Container = styled.div`
   height: 100%;
   width: 100%;
   display: flex;

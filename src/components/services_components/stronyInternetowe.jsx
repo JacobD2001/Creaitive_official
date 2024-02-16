@@ -146,7 +146,12 @@ const StronyInternetowe = ({contactRef}) => {
           </Subtitle>
         </KeyPointColumn>
 
+{/* <KeyPointColumn> */}
         <Button onClick={() => scrollToContact(contactRef)}>Porozmawiajmy</Button>
+        {/* </KeyPointColumn> */}
+        {/* <KeyPointColumn>
+        <Button onClick={() => scrollToContact(contactRef)}>Dowiedz się więcej</Button>
+        </KeyPointColumn> */}
 
       </KeyPointsContainer>
 
