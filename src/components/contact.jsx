@@ -5,8 +5,8 @@ import Map from "./API_Components/Map";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
-  @media only screen and (max-width: 1280px) {
+  scroll-snap-align: none; /*na chwile none potem center*/
+  @media only screen and (max-width: 1023px) {
     margin-top: 200px;
     scroll-snap-align: none;
   }
@@ -18,7 +18,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     justify-content: center;
     position: relative;
     width: 100%;
@@ -31,7 +31,8 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  @media only screen and (max-width: 1280px) {
+  padding: 20px;
+  @media only screen and (max-width: 1023px) {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,7 +64,7 @@ const Form = styled.form`
   flex-direction: column;
   gap: 25px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     width: 300px;
   }
 `;
@@ -163,7 +164,7 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     position: absolute;
     top: 50%;
     left: 50%;

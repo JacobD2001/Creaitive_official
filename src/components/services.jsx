@@ -21,46 +21,16 @@ const data = [
   "Indywidualne Rozwiązania",
 ];
 
-// const Section = styled.div`
-//   height: 100vh;
-//   scroll-snap-align: center;
-//   display: flex;
-//   justify-content: center;
-//   position: relative;
-//   color: black;
-//   font-size: 14px;
-//   font-weight: 300;
-
-//   @media only screen and (max-width: 1280px) {
-//     width: 100%;
-//     flex-direction: column;
-//     gap: 0px;
-//     scroll-snap-align: none;
-//   }
-// `;
-
-// const Container = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-
-//   @media only screen and (max-width: 1280px) {
-//     width: 100%;
-//     flex-direction: column;
-//     gap: 0px;
-//   }
-// `;
-
 export const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: none; /*na chwile none potem center*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
     
   /* Low-Resolution Tablets and iPads and mobiles */
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     height: 200vh;
     scroll-snap-align: none;
   }
@@ -70,17 +40,15 @@ export const Section = styled.div`
 
 export const Container = styled.div`
   height: 100%;
-  scroll-snap-align: center;
   width: 100%;
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: none;
   }
 
 `;
@@ -91,7 +59,7 @@ const Left = styled.div`
   align-items: center;
   gap: 20px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     flex: 1;
     align-items: center;
     justify-content: center;
@@ -114,7 +82,7 @@ const ListItem = styled.li`
   -webkit-text-stroke: 0.5px white;
   position: relative;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     font-size: 30px;
     color: white;
     -webkit-text-stroke: 0px;
@@ -150,7 +118,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 2;
   position: relative;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     flex: 1;
     flex-direction: column;
     width: 100%;

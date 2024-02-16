@@ -3,14 +3,15 @@ import { pulseAnimation, moveUpAndDownAnimation } from "./animations";
 
 export const IntroSection = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: none; /*na chwile none potem center*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
     
   /* Low-Resolution Tablets and iPads and mobiles */
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     height: 200vh;
     scroll-snap-align: none;
   }
@@ -20,17 +21,15 @@ export const IntroSection = styled.div`
 
 export const IntroContainer = styled.div`
   height: 100%;
-  scroll-snap-align: center;
   width: 100%;
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: none;
   }
 
 `;
@@ -42,7 +41,7 @@ export const IntroLeft = styled.div`
   justify-content: center;
   gap: 20px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     flex: 1;
     align-items: center;
   }
@@ -58,7 +57,7 @@ export const IntroTitle = styled.h1`
     font-weight: bold;
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     text-align: center;
   }
 `;
@@ -93,7 +92,7 @@ span {
 }
 
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     padding: 20px;
     text-align: center;
   }
@@ -116,7 +115,7 @@ export const IntroRight = styled.div`
   position: relative;
 
   
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     flex: 1;
     width: 100%;
   }
@@ -135,12 +134,12 @@ export const IntroImg = styled.img`
   margin: auto;
   animation: ${moveUpAndDownAnimation} 2s infinite ease alternate;
 
-  @media only screen and (max-width: 400px) {
-    display: none; 
-  }
+   @media only screen and (max-width: 374px) {
+  display: none; 
+  } 
 
   /* Low-Resolution Tablets and iPads */
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     width: 70%; 
     max-width: 800px; 
     max-height: 600px; 

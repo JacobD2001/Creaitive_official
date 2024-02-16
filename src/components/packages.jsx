@@ -17,39 +17,9 @@ const data = [
   "Pakiet Business Automation",
 ];
 
-// const Section = styled.div`
-//   height: 100vh;
-//   scroll-snap-align: center;
-//   display: flex;
-//   justify-content: center;
-//   position: relative;
-//   color: black;
-//   font-size: 14px;
-//   font-weight: 300;
-
-//   @media only screen and (max-width: 1280px) {
-//     width: 100%;
-//     flex-direction: column;
-//     gap: 0px;
-//     scroll-snap-align: none;
-//   }
-// `;
-
-// const Container = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-
-//   @media only screen and (max-width: 1280px) {
-//     width: 100%;
-//     flex-direction: column;
-//     gap: 0px;
-//   }
-// `;
-
 export const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  scroll-snap-align: none; /*na chwile none potem center*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +33,7 @@ export const Section = styled.div`
     scroll-snap-align: none;
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     margin-top: 200px;
     height: 200vh;
     scroll-snap-align: none;
@@ -74,17 +44,15 @@ export const Section = styled.div`
 
 export const Container = styled.div`
   height: 100%;
-  scroll-snap-align: center;
   width: 100%;
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: none;
   }
 
 `;
@@ -95,7 +63,7 @@ const Right = styled.div`
   align-items: center;
   gap: 20px;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     flex: 1;
     align-items: center;
     flex-direction: column;
@@ -118,7 +86,7 @@ const ListItem = styled.li`
   -webkit-text-stroke: 0.5px white;
   position: relative;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     font-size: 30px;
     color: white;
     -webkit-text-stroke: 0px;
@@ -164,7 +132,7 @@ const ListItem = styled.li`
 const Left = styled.div`
   flex: 2;
   position: relative;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1023px) {
     flex: 1;
     width: 100%;
     flex-direction: column;
@@ -182,21 +150,6 @@ const Left = styled.div`
 //   writing-mode: vertical-rl; /* Vertical writing mode */
 //   transform: rotate(180deg); /* Rotate the text 180 degrees to make it vertical */
 
-// `;
-
-// const Left = styled.div`
-//   flex: 2;
-//   display: flex;
-//   align-items: center;
-//   gap: 20px;
-
-//   @media only screen and (max-width: 768px) {
-//     flex: 1;
-//     align-items: center;
-//     justify-content: center;
-//     flex-direction: column;
-
-//   }
 // `;
 
 //component to map
