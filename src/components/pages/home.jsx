@@ -44,7 +44,7 @@ function Home() {
       <Contact ref={contactRef} />
       <Recommend ref={recommendRef} />
       <FAQ ref={faqRef} />
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   );
 }

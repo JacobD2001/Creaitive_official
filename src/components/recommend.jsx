@@ -3,16 +3,15 @@ import styled, { keyframes } from 'styled-components';
 import { moveLeftToRightAnimation } from "./styled_components/animations";
 
 const RecommendsSection = styled.div`
-  height: 8%; /* Adjust the height as needed */
+  height: 10%; /* Adjust the height as needed */
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px;
   scroll-snap-align: start;
   overflow: hidden; /* Ensure overflow is hidden to hide the content outside the container */
 
   @media only screen and (max-width: 1280px) {
-    height: 10%; /* Adjust the height for smaller screens */
     scroll-snap-align: none;
   }
 `;

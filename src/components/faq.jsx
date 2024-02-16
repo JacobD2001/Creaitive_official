@@ -2,19 +2,7 @@ import React, { forwardRef, useState } from 'react';
 import styled from 'styled-components';
 
 
-// const FaqSection = styled.div`
-//   display: grid;
-//   grid-template-columns: 1fr 1fr; /* Two equal-sized columns */
-//   height: 100vh; /* Adjust the height as needed */
-//   padding: 20px;
-//   scroll-snap-align: center;
 
-//   @media only screen and (max-width: 1280px) {
-//     grid-template-columns: 1fr; /* Single column for smaller screens */
-//     scroll-snap-align: none;
-//   }
-
-// `;
 
 const Title = styled.h1`
   font-size: 74px;
@@ -47,22 +35,36 @@ const FaqContent = styled.div`
   
 // `;
 
+// ORIGINAL NO SPACE
+// const FaqSection = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr 1fr; /* Two equal-sized columns */
+//   height: 100vh; /* Adjust the height as needed */
+//   padding: 20px;
+//   scroll-snap-align: center;
+
+//   @media only screen and (max-width: 1280px) {
+//     grid-template-columns: 1fr; /* Single column for smaller screens */
+//     scroll-snap-align: none;
+//   }
+
+// `;
+
+
  const FaqSection = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
     
   /* Low-Resolution Tablets and iPads and mobiles */
   @media only screen and (max-width: 1280px) {
     height: 200vh;
     scroll-snap-align: none;
   }
-  
-
 `;
+
 
  const Container = styled.div`
   height: 100%;
@@ -83,15 +85,19 @@ const FaqContent = styled.div`
 
 const Left = styled.div`
 flex: 2;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 20px;
 position: relative;
+
 @media only screen and (max-width: 1280px) {
-  flex: 1;
-  width: 100%;
+ display: none;
 }
 `;
 
 const Right = styled.div`
-  flex: 3;
+  flex: 2;
   position: relative;
   @media only screen and (max-width: 1280px) {
     flex: 1;
@@ -126,8 +132,9 @@ const Answer = styled.div`
   border-radius: 10px; // Add this line
 `;
 const Img = styled.img`
-  width: 800px;
-  height: 600px;
+  width: 80%;
+  max-width: 800px;
+  height:auto;
   object-fit: contain;
   position: absolute;
   top: 0;
