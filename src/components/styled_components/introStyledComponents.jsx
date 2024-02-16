@@ -114,6 +114,8 @@ color: white;
 export const IntroRight = styled.div`
   flex: 3;
   position: relative;
+
+  
   @media only screen and (max-width: 1280px) {
     flex: 1;
     width: 100%;
@@ -132,6 +134,10 @@ export const IntroImg = styled.img`
   right: 0;
   margin: auto;
   animation: ${moveUpAndDownAnimation} 2s infinite ease alternate;
+
+  @media only screen and (max-width: 400px) {
+    display: none; 
+  }
 
   /* Low-Resolution Tablets and iPads */
   @media only screen and (max-width: 1280px) {
