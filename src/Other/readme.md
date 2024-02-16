@@ -15,7 +15,8 @@ Libraries to install
 //TO DO:
 Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/youtube23/blob/3d-portfolio/src/components/WebDesign.jsx
 
-1. Responsive horizontally, and test every aspect of responsivness - TO FIX not working correctly. PRIOR 6
+1. gdy na mobilce powinno scrollować do workcomponentu jak klikniesz np na 'strony internetowe'
+2. OD 1024 PIXELI powinno services i packages być left/right - POPRAWIĆ NA 1024 PIXELE + normalne menu - bo to już desktopy lub horizontal tablety: https://www.geeksforgeeks.org/how-to-target-desktop-tablet-and-mobile-using-media-query/
 2. Podmieniać zdjęcia PRIOR 3 
 3. Refactor codu - zrobić reusable componenty te które się da styled, te które nie dodać do kolejnego typu servicesstyled components PRIOR 1 - NAJMNIEJ WAŻNE
 4. Dodać pozostałe komponenty w services/packages PRIOR 2 - czwartek
