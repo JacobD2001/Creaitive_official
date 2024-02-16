@@ -11,10 +11,11 @@ const FooterSection = styled.footer`
   text-align: center;
   scroll-snap-align: center;
 
+
   @media only screen and (max-width: 1280px) {
     scroll-snap-align: none;
+    margin-top: 50px;
   }
-
 `;
 
 const Separator = styled.hr`
@@ -45,7 +46,6 @@ color: white;
 @media only screen and (max-width: 1280px) {
   text-align: center;
 }
-  margin-bottom: 10px;
 `;
 
 const Title = styled.h2`
