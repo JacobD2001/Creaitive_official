@@ -16,7 +16,6 @@ Libraries to install
 Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/youtube23/blob/3d-portfolio/src/components/WebDesign.jsx
 
 1. gdy na mobilce powinno scrollować do workcomponentu jak klikniesz np na 'strony internetowe'
-2. OD 1024 PIXELI powinno services i packages być left/right - POPRAWIĆ NA 1024 PIXELE + normalne menu - bo to już desktopy lub horizontal tablety: https://www.geeksforgeeks.org/how-to-target-desktop-tablet-and-mobile-using-media-query/
 2. Podmieniać zdjęcia PRIOR 3 
 3. Refactor codu - zrobić reusable componenty te które się da styled, te które nie dodać do kolejnego typu servicesstyled components PRIOR 1 - NAJMNIEJ WAŻNE
 4. Dodać pozostałe komponenty w services/packages PRIOR 2 - czwartek
@@ -28,8 +27,10 @@ Zacząć od: stronyinternetowe komponent sa webdesign: https://github.com/safak/
 1. CSS navbara
 2. Menu clicking nie jest responsive - gdzieś jest issue z responsivness services i packages źle się skalują, margains przy 320 procent są git ale dociągamy do 420 i już są wielkie przy 728 to praktycznie cała giga strona Xd - to fix
 
-FLOW: 
+//TO DO IN THE FUTURE:
+1. Responsive for 4K: https://www.geeksforgeeks.org/how-to-target-desktop-tablet-and-mobile-using-media-query/
 
+FLOW: 
 Dokładna oferta z opisami żeby miało ręce i nogi -> Komponenty w services -> Teksty home page pozmieniać -> Dodać zdjęcia i modele 3d homepage -> naprawić bugi -> pobawić się więcej cssesem na home pagu - 8.02
 
 ----->

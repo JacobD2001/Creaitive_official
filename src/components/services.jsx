@@ -1,4 +1,4 @@
-import React, { useState, forwardRef} from "react";
+import React, { useState, forwardRef, useRef} from "react";
 import styled from "styled-components";
 import CanvasBlob from "./3d_models/CanvasBlob";
 
@@ -34,8 +34,6 @@ export const Section = styled.div`
     height: 200vh;
     scroll-snap-align: none;
   }
-  
-
 `;
 
 export const Container = styled.div`
@@ -139,6 +137,14 @@ const Services = forwardRef((props, ref) => {
   const { contactRef } = props;
   const [work, setWork] = useState(data[0]);
   const WorkComponent = servicesMapComponent[work];
+  const workRef = useRef(null);
+
+  const handleListItemClick = (item) => {
+    setWork(item);
+    if (window.innerWidth <= 1023) {
+      workRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <Section ref={ref}>
@@ -146,13 +152,13 @@ const Services = forwardRef((props, ref) => {
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} onClick={() => setWork(item)}>
+              <ListItem key={item} text={item} onClick={() => handleListItemClick(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
-        <Right>
+        <Right ref={workRef}>
           <CanvasBlob/>
           <WorkComponent contactRef={contactRef} />
         </Right>
