@@ -13,7 +13,6 @@
 
 
 //TO DO:
-1. Podmieniać zdjęcia 
 2. Dopieścić 
 3. Będą potrzebne dodatkowe strony dla każdej usługi(use casy + przykłady, proces z klientem i kontakt) - PRIOR 1
 5. integrate chatgpte
