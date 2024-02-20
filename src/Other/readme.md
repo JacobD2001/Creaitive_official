@@ -20,7 +20,7 @@
 6. Biznesowo - telefony, maile polityka prywatnośći, sociale, angrybunny store(https://help.shopify.com/en/manual/domains/managing-domain-ownership/transferring-shopify-domains#transfer-domain-provider) - LAST
 
 //TO DO ISSUES:
-1. CSS navbara
+1. CSS navbara //to do navbar-anchor branch
 2. Menu na mobilce nie scrolluje na sam początek tekstu 
 
 //TO DO BEFORE DEPLOY:

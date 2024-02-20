@@ -49,17 +49,19 @@ export const NavList = styled.ul`
   list-style: none;
 `;
 
-export const NavListItem = styled.li`
-  cursor: pointer;
-  color: lightgray;
+// export const NavListItem = styled.li`
+//   cursor: pointer;
+//   color: lightgray;
+//   color: ${(props) => (props.active ? "#ff69b4" : "inherit")}; // Pink color for active section
 
-  @media only screen and (max-width: 1023px) {
-    font-size: 24px;
-    margin: 0;
-    color: lightgray;
-    list-style: none;
-  }
-`;
+
+//   @media only screen and (max-width: 1023px) {
+//     font-size: 24px;
+//     margin: 0;
+//     color: lightgray;
+//     list-style: none;
+//   }
+// `;
 
 export const NavMenuButton = styled.button`
   display: none;

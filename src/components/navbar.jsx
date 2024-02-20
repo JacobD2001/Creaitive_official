@@ -6,7 +6,7 @@ import {
   NavLinks,
   NavLogo,
   NavList,
-  NavListItem,
+  //NavListItem,
   NavMenuButton,
 } from "./styled_components/navbarStyledComponents";
 
@@ -29,6 +29,20 @@ const MobileMenu = styled.div`
   }
 `;
 
+export const NavListItem = styled.li`
+  cursor: pointer;
+  color: lightgray;
+  color: ${(props) => (props.active ? "#ff69b4" : "inherit")}; // Pink color for active section
+
+
+  @media only screen and (max-width: 1023px) {
+    font-size: 24px;
+    margin: 0;
+    color: lightgray;
+    list-style: none;
+  }
+`;
+
 const Navbar = ({
   introRef,
   servicesRef,
@@ -38,6 +52,21 @@ const Navbar = ({
   faqRef,
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("intro");
+
+  // Step 4: Implement Scroll Event
+  useEffect(() => {
+    const handleScroll = () => {
+      const active = getActiveSection();
+      setActiveSection(active);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -50,6 +79,25 @@ const Navbar = ({
     setIsMobileMenuOpen(false);
   };
 
+  const getActiveSection = () => {
+    const scrollPosition = window.scrollY + 1;
+  
+    // Adjust these values based on your layout
+    const introOffset = introRef.current.offsetTop;
+    const servicesOffset = servicesRef.current.offsetTop;
+    // Repeat for other sections...
+  
+    if (scrollPosition < servicesOffset) {
+      return "intro";
+    } else if (scrollPosition < packagesOffset) {
+      return "services";
+    }
+    // Repeat for other sections...
+  
+    return "faq"; // Default to the last section
+  };
+  
+
   return (
     <NavSection>
       <NavContainer>
@@ -57,7 +105,8 @@ const Navbar = ({
           {isMobileMenuOpen ? "X" : "☰"}
         </NavMenuButton>
         <MobileMenu isOpen={isMobileMenuOpen}>
-          <NavListItem onClick={() => handleItemClick(introRef)}>
+          <NavListItem onClick={() => handleItemClick(introRef)}
+          active={activeSection === "intro"}>
             O nas
           </NavListItem>
           <NavListItem onClick={() => handleItemClick(servicesRef)}>
