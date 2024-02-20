@@ -26,5 +26,8 @@
 1. CSS navbara
 2. Menu na mobilce nie scrolluje na sam początek tekstu 
 
+//TO DO BEFORE DEPLOY:
+1. Learn how to sell remember the jes lessons
+
 //TO DO IN THE FUTURE:
 1. Responsive for 4K: https://www.geeksforgeeks.org/how-to-target-desktop-tablet-and-mobile-using-media-query/

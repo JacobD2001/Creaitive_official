@@ -5,16 +5,16 @@ import { Canvas } from "@react-three/fiber";
 import CanvasBlob from "./3d_models/CanvasBlob";
 
 //import services components
-import BusinessAutomation from "./packages_components/businessAutomation";
+//import BusinessAutomation from "./packages_components/businessAutomation";
 import BusinessInfluence from "./packages_components/businessInfluence";
 import DigitalPresence from "./packages_components/digitalPresence";
 import fullComfort from "./packages_components/fullComfort";
 
 const data = [
   "Pakiet Digital Presence",
-  "Pakiet Full Comfort",
   "Pakiet Business Influence",
-  "Pakiet Business Automation",
+  "Pakiet Full Comfort"
+  /*"Pakiet Business Automation",*/
 ];
 
 export const Section = styled.div`
@@ -143,9 +143,9 @@ const Left = styled.div`
 //component to map
 const packagesMapComponent = {
   "Pakiet Digital Presence": DigitalPresence,
-  "Pakiet Full Comfort": fullComfort,
   "Pakiet Business Influence": BusinessInfluence,
-  "Pakiet Business Automation": BusinessAutomation,
+  "Pakiet Full Comfort": fullComfort,
+  // "Pakiet Business Automation": BusinessAutomation,
 };
 
 const Packages = forwardRef((props, ref) => {

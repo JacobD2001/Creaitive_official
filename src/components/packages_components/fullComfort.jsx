@@ -19,31 +19,30 @@ const fullComfort = ({ contactRef }) => {
     <WorkComponentContainer>
       <KeyPointsContainer>
         <KeyPointColumn>
-          <Title>Pełne Prowadzenie</Title>
+          <Title>Kompletna Witryna</Title>
           <Subtitle>
-            Kompleksowe zarządzanie Twoimi profilami na mediach
-            społecznościowych
+            W pełni funkcjonalna strona internetowa z wytrenowanym chatbotem
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Treści Graficzne</Title>
           <Subtitle>
-            Pełna opieka pod względem graficznym, tworzenie i publikacja treści
-          </Subtitle>
-        </KeyPointColumn>
-
-        <KeyPointColumn>
-          <Title>Treści Video</Title>
-          <Subtitle>
-            Pełna opieka pod względem video, tworzenie i publikacja treści
+            Tworzenie i publikacja treści graficznych i wideo na stronę i social media
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Prowadzenie Kampanii</Title>
           <Subtitle>
-            Prowadzenie kampanii reklamowych na mediach społecznościowych
+          Prowadzenie kampanii reklamowych na mediach społecznościowych
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn>
+          <Title>Pełna Opieka</Title>
+          <Subtitle>
+            Kompleksowa opieka przez cały proces tworzenia i utrzymania strony
           </Subtitle>
         </KeyPointColumn>
 

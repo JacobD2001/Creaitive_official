@@ -19,33 +19,31 @@ const businessInfluence = ({ contactRef }) => {
     <WorkComponentContainer>
       <KeyPointsContainer>
         <KeyPointColumn>
-          <Title>Witryna Internetowa</Title>
-          <Subtitle>
-            Kompleksowe rozwiązanie obejmujące projekt i budowę strony
-            internetowej
-          </Subtitle>
-        </KeyPointColumn>
-
-        <KeyPointColumn>
-          <Title>Inteligenty Chatbot</Title>
-          <Subtitle>
-            Implementacja chatbota dostosowanego do unikalnych potrzeb Twojej
-            firmy
-          </Subtitle>
-        </KeyPointColumn>
-
-        <KeyPointColumn>
-          <Title>Ambasadorzy Marki</Title>
-          <Subtitle>
-            Włączamy do strategii marketingowej spersonalizowanych influencerów
-          </Subtitle> 
-        </KeyPointColumn>
-
-        <KeyPointColumn>
           <Title>Pełne Prowadzenie</Title>
           <Subtitle>
             Kompleksowe zarządzanie Twoimi profilami na mediach
             społecznościowych
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn>
+          <Title>Treści Graficzne</Title>
+          <Subtitle>
+            Nielimitowane tworzenie i publikacja treści graficznych i wideo
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn>
+          <Title>Prowadzenie Kampanii</Title>
+          <Subtitle>
+          Prowadzenie kampanii reklamowych na mediach społecznościowych
+          </Subtitle>
+        </KeyPointColumn>
+
+        <KeyPointColumn>
+          <Title>Pełna Opieka</Title>
+          <Subtitle>
+            Kompleksowa opieka przez cały proces tworzenia i utrzymania strony
           </Subtitle>
         </KeyPointColumn>
 
