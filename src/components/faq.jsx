@@ -124,24 +124,24 @@ const Faq = forwardRef((props, ref) => {
 
   const faqItems = [
     {
-      question: "What is the meaning of life?",
-      answer: "Answer 1: 42 asfasfsafa.",
+      question: "Jak mogę się z wami skontaktować?",
+      answer: "Zadzwoń do nas pod numer 111111111 lub napisz na adres mailowy: info@example.com",
     },
     {
-      question: "How to use styled components in React?",
-      answer: "Answer 2: Install styled-components, create a styled component, and use it in your components.",
+      question: "Ile to kosztuje?",
+      answer: "Nasze usługi są wyceniane indywidualnie, w zależności od twoich potrzeb. Skontaktuj się z nami, a my przygotujemy dla Ciebie atrakcyjną ofertę.",
     },
     {
-      question: "Is React better than Angular?",
-      answer: "Answer 3: It depends on the project requirements and personal preference. React is more lightweight and flexible, while Angular provides a more opinionated framework.",
+      question: "Czy mogę zobaczyć przykładowe realizacje?",
+      answer: "Oczywiście. Na naszej stronie znajdziesz przykłady naszej pracy. Jeśli chcesz zobaczyć więcej, skontaktuj się z nami pod numer 111111111 lub napisz na adres mailowy: info@example.com",
     },
     {
-      question: "What are the advantages of using Redux?",
-      answer: "Answer 4: Redux helps manage the state of your application in a predictable way, making it easier to debug and test. It also facilitates communication between components.",
+      question: "Jaką mam gwarancję jakości?",
+      answer: "Oferujemy gwarancję na nasze usługi, omawiając nasze projekty i wdrażając je dopiero po Twoim zatwierdzeniu. W razie jakichkolwiek problemów, jesteśmy do twojej dyspozycji.",
     },
     {
-      question: "How can I optimize the performance of my React app?",
-      answer: "Answer 5: You can optimize performance by using React.memo, implementing code splitting, and optimizing render methods. Also, consider using PureComponent and useMemo for memoization.",
+      question: "Czy mogę liczyć na wsparcie techniczne i utrzymywanie wdrażanych usług?",
+      answer: "Oczywiście. Liczymy na długotrwałą współpracę z naszymi klientami. Oferujemy wsparcie techniczne i utrzymywanie wdrażanych usług.",
     },
     // Add more questions and answers as needed
   ];
@@ -158,7 +158,7 @@ const Faq = forwardRef((props, ref) => {
 
           </Left>
         <Right>
-          <Title>Masz pytanie?</Title>
+          <Title>Masz pytania?</Title>
           <FaqContent>
             {faqItems.map((item, index) => (
               <Dropdown key={index}>
