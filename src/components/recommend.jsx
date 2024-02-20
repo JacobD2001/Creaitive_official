@@ -44,7 +44,7 @@ const StyledLink = styled.a`
   text-decoration: none; // Remove the underline
 
   &:hover {
-    color: #888; // Change this to the color you want when hovering
+    color: #AD19B3; // Change this to the color you want when hovering
   }
 `;
 
@@ -52,14 +52,14 @@ const Recommend = forwardRef((props, ref) => {
   return (
       <RecommendsSection ref={ref}>
           <RecommendationContainer>
-              <StyledLink href="https://example.com" target="_blank" rel="noopener noreferrer">
-                  <Logo src="./img/logo.png" alt="ADAD" />
-                  <Text>Adad meble</Text>
+              <StyledLink href="https://adadmeble.pl/" target="_blank" rel="noopener noreferrer">
+                  <Logo src="./img/adadLogo.png" alt="ADAD" />
+                  <Text>Adad</Text>
               </StyledLink>
           </RecommendationContainer>
           <RecommendationContainer>
-              <StyledLink href="https://adadmeble.pl/" target="_blank" rel="noopener noreferrer">
-                  <Logo src="./img/logo.png" alt="AngryBunny" />
+              <StyledLink href="http://angrybunny.store/" target="_blank" rel="noopener noreferrer">
+                  <Logo src="./img/angryBunnyLogo.png" alt="AngryBunny" />
                   <Text>AngryBunny</Text>
               </StyledLink>
           </RecommendationContainer>

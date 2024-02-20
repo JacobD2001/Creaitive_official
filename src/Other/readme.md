@@ -17,8 +17,8 @@
 2. Dopieścić 
 3. Będą potrzebne dodatkowe strony dla każdej usługi(use casy + przykłady, proces z klientem i kontakt) - PRIOR 1
 5. integrate chatgpte
-6. clean codu 
-6. Biznesowo - telefony, maile polityka prywatnośći, sociale - LAST
+6. clean codu/ optymalizacja zdjęć
+6. Biznesowo - telefony, maile polityka prywatnośći, sociale, angrybunny store(https://help.shopify.com/en/manual/domains/managing-domain-ownership/transferring-shopify-domains#transfer-domain-provider) - LAST
 
 //TO DO ISSUES:
 1. CSS navbara
