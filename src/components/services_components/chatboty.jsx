@@ -21,7 +21,7 @@ const Chatboty = ({ contactRef }) => {
         <KeyPointColumn>
           <Title>Implementacja</Title>
           <Subtitle>
-            Wdrożymy inteligentnego chatbota dostosowanego do Twojej strony lub
+            Wdrożymy chatbota dostosowanego do Twojej strony lub
             komunikatora
           </Subtitle>
         </KeyPointColumn>
@@ -36,16 +36,14 @@ const Chatboty = ({ contactRef }) => {
         <KeyPointColumn>
           <Title>Szkolenie</Title>
           <Subtitle>
-            Wyuczmy chatbota, aby odpowiadał na pytania klientów zgodnie z
-            twoimi potrzebami
+            Nauczymy chatbota, odpowiadać na pytania zgodnie z twoimi potrzebami
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Integracja</Title>
           <Subtitle>
-            Zintegrujemy chatbota z różnymi platformami komunikacyjnymi, takimi
-            jak Messenger, WhatsApp itp.
+            Zintegrujemy chatbota z różnymi platformami i komunikatorami 
           </Subtitle>
         </KeyPointColumn>
 

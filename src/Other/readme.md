@@ -20,6 +20,7 @@
 7. Będą potrzebne dodatkowe strony dla każdej usługi(use casy + przykłady, proces z klientem i kontakt) - PRIOR 1
 8. clean codu - PRIOR 2
 9. obs record do michała uxa
+10. integrate chatgpt
 
 //TO DO ISSUES:
 1. CSS navbara

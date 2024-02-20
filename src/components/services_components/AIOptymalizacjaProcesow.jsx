@@ -19,33 +19,30 @@ const AIOptymalizacjaProcesow = ({ contactRef }) => {
     <WorkComponentContainer>
       <KeyPointsContainer>
         <KeyPointColumn>
-          <Title>Analiza Procesów</Title>
+          <Title>Analiza</Title>
           <Subtitle>
-            Dokładnie przeanalizujemy procesy w Twojej firmie, aby zidentyfikować obszary do optymalizacji
+            Dokonamy szczegółowej analizy procesów w twojej organizacji
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Optymalizacja</Title>
           <Subtitle>
-            Zoptymalizujemy istniejące procesy, eliminując zbędne kroki i
-            identyfikując obszary do usprawnienia
+            Zoptymalizujemy istniejące procesy, poprzez konkretne narzędzia
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Automatyzacja</Title>
           <Subtitle>
-            Wprowadzimy rozwiązania oparte na sztucznej inteligencji, aby
-            zautomatyzować powtarzalne zadania i przyspieszyć procesy
+            Wproawdzimy konkretne rozwiązania oparte na sztucznej inteligencji
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Monitorowanie</Title>
           <Subtitle>
-            Stworzymy narzędzia do monitorowania efektywności optymalizacji oraz
-            generowania raportów dla lepszego zarządzania twoim biznesem
+            Zaopiekujemy się wdrożonymi rozwiązaniami, monitorując ich efekty
           </Subtitle>
         </KeyPointColumn>
 
