@@ -1,30 +1,57 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import {
+  WorkComponentContainer,
+  KeyPointsContainer,
+  KeyPointColumn,
+  Button,
+  Title,
+  Subtitle,
+} from "../styled_components/workComponentServicesStyledComponents";
 
-const Desc = styled.div`
-  width: 200px;
-  height: 70px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  position: absolute;
-  top: 100px;
-  right: 100px;
+const fullComfort = ({ contactRef }) => {
+  const scrollToContact = () => {
+    if (contactRef && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  @media only screen and (max-width: 768px) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-`;
+  return (
+    <WorkComponentContainer>
+      <KeyPointsContainer>
+        <KeyPointColumn>
+          <Title>Pełne Prowadzenie</Title>
+          <Subtitle>
+            Kompleksowe zarządzanie Twoimi profilami na mediach
+            społecznościowych
+          </Subtitle>
+        </KeyPointColumn>
 
-function FullComfort() {
-    return (
-        <Desc>FullComfort</Desc>
+        <KeyPointColumn>
+          <Title>Treści Graficzne</Title>
+          <Subtitle>
+            Pełna opieka pod względem graficznym, tworzenie i publikacja treści
+          </Subtitle>
+        </KeyPointColumn>
 
-    )
-}
+        <KeyPointColumn>
+          <Title>Treści Video</Title>
+          <Subtitle>
+            Pełna opieka pod względem video, tworzenie i publikacja treści
+          </Subtitle>
+        </KeyPointColumn>
 
-export default FullComfort
+        <KeyPointColumn>
+          <Title>Prowadzenie Kampanii</Title>
+          <Subtitle>
+            Prowadzenie kampanii reklamowych na mediach społecznościowych
+          </Subtitle>
+        </KeyPointColumn>
+
+        <Button onClick={() => scrollToContact(contactRef)}>
+          Porozmawiajmy
+        </Button>
+      </KeyPointsContainer>
+    </WorkComponentContainer>
+  );
+};
+export default fullComfort;
