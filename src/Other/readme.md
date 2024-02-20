@@ -13,14 +13,12 @@
 
 
 //TO DO:
-2. Podmieniać zdjęcia - PRIOR 3 
-4. Dodać pozostałe komponenty w services/packages - PRIOR 1
-5. całe biznes needs z docsów - PRIOR 4 
-6. Dopieścić PRIOR LAST
-7. Będą potrzebne dodatkowe strony dla każdej usługi(use casy + przykłady, proces z klientem i kontakt) - PRIOR 1
-8. clean codu - PRIOR 2
-9. obs record do michała uxa
-10. integrate chatgpt
+1. Podmieniać zdjęcia 
+2. Dopieścić 
+3. Będą potrzebne dodatkowe strony dla każdej usługi(use casy + przykłady, proces z klientem i kontakt) - PRIOR 1
+5. integrate chatgpte
+6. clean codu 
+6. Biznesowo - telefony, maile polityka prywatnośći, sociale - LAST
 
 //TO DO ISSUES:
 1. CSS navbara

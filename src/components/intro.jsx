@@ -45,7 +45,7 @@ const Intro = forwardRef((props, introRef) => {
         </IntroLeft>
         <IntroRight>
           {/* <CanvasBlob/> */}
-          <IntroImg src="./img/moon.png" />
+          <IntroImg src="./img/document-transformed.png" />
         </IntroRight>
       </IntroContainer>
     </IntroSection>

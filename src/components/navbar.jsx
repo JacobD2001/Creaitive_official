@@ -77,7 +77,7 @@ const Navbar = ({
         <NavLinks>
           <NavLogo
             onClick={() => scrollToSection(introRef)}
-            src="./img/logo.png"
+            src="./img/creaitive_logo.png"
           />
           <NavList>
             <NavListItem onClick={() => scrollToSection(introRef)}>
