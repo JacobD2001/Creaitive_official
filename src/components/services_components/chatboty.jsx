@@ -1,30 +1,59 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import {
+  WorkComponentContainer,
+  KeyPointsContainer,
+  KeyPointColumn,
+  Button,
+  Title,
+  Subtitle,
+} from "../styled_components/workComponentServicesStyledComponents";
 
-const Desc = styled.div`
-  width: 200px;
-  height: 70px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  position: absolute;
-  top: 100px;
-  right: 100px;
+const Chatboty = ({ contactRef }) => {
+  const scrollToContact = () => {
+    if (contactRef && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  @media only screen and (max-width: 768px) {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-`;
+  return (
+    <WorkComponentContainer>
+  <KeyPointsContainer>
 
-function Chatboty() {
-    return (
-        <Desc>Integracje AI</Desc>
+<KeyPointColumn>
+  <Title>Implementacja</Title>
+  <Subtitle>
+    Wdrożymy inteligentnego chatbota dostosowanego do Twojej strony lub
+    komunikatora
+  </Subtitle>
+</KeyPointColumn>
 
-    )
-}
+<KeyPointColumn>
+  <Title>Personalizacja</Title>
+  <Subtitle>
+    Dostosujemy chatbota do unikalnych potrzeb Twojej marki
+  </Subtitle>
+</KeyPointColumn>
 
-export default Chatboty
+<KeyPointColumn>
+  <Title>Szkolenie</Title>
+  <Subtitle>
+    Wyuczmy chatbota, aby odpowiadał na pytania klientów zgodnie z twoimi potrzebami
+  </Subtitle>
+</KeyPointColumn>
+
+<KeyPointColumn>
+  <Title>Integracja</Title>
+  <Subtitle>
+    Zintegrujemy chatbota z różnymi platformami komunikacyjnymi, takimi jak
+    Messenger, WhatsApp itp.
+  </Subtitle>
+</KeyPointColumn>
+
+<Button onClick={() => scrollToContact(contactRef)}>
+  Porozmawiajmy
+</Button>
+
+</KeyPointsContainer>    </WorkComponentContainer>
+  );
+};
+export default Chatboty;
