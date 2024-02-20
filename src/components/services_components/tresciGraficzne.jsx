@@ -19,35 +19,31 @@ const tresciGraficzne = ({ contactRef }) => {
     <WorkComponentContainer>
       <KeyPointsContainer>
         <KeyPointColumn>
-          <Title>Kampanie marketingowe</Title>
+          <Title>Kampanie</Title>
           <Subtitle>
-            Tworzymy unikatowe i kreatywne treści graficzne dostosowane do
-            Twoich potrzeb marketingowych
+            Stworzymy unikatowe grafiki dostosowane do
+            twoich kampanii
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Social Media</Title>
           <Subtitle>
-            Tworzymy treści graficzne zoptymalizowane pod kątem różnych platform
-            social media, zapewniając spójny wizerunek marki na różnych kanałach
+            Treści graficzne zapewniające spójność wizerunku marki w social media
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Okładki</Title>
           <Subtitle>
-            Tworzymy profesjonalne okładki do Twoich produktów, e-booków czy
-            innych materiałów
+            Tworzymy profesjonalne okładki do twoich produktów oraz e-booków 
           </Subtitle>
         </KeyPointColumn>
 
         <KeyPointColumn>
           <Title>Zdjęcia Produktowe</Title>
           <Subtitle>
-            Wykorzystujemy narzędzia oparte na sztucznej inteligencji aby
-            stworzyć profesjonalne zdjęcia produktowe obniżając tym samym koszty
-            a zwiększając jakość wykonania
+            Tworzymy profesjonalne zdjęcia produktowe przy użyciu narzędzi AI
           </Subtitle>
         </KeyPointColumn>
 
