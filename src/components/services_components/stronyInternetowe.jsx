@@ -7,11 +7,8 @@ import {
   Title,
   Subtitle,
 } from "../styled_components/workComponentServicesStyledComponents";
-
-// Import statements at the top of your file
-import { useState } from "react";
 import { useSpring, animated, config } from "react-spring";
-import styled from "styled-components";
+
 
 const StronyInternetowe = ({ contactRef, isVisible }) => {
   const scrollToContact = () => {
@@ -23,7 +20,7 @@ const StronyInternetowe = ({ contactRef, isVisible }) => {
   const fadeInAnimation = useSpring({
     opacity: isVisible ? 1 : 0,
     from: { opacity: 0 },
-    config: { duration: 1000}, // Adjust the duration as needed (in milliseconds)
+    config: { duration: 1000}, 
   });
 
   return (

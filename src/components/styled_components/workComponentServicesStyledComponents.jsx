@@ -1,5 +1,7 @@
 import { pulseAnimation, moveUpAndDownAnimation } from "./animations";
 import styled, { keyframes } from "styled-components";
+import { useSpring, animated, config } from "react-spring";
+
 
 export const WorkComponentContainer = styled(animated.div)`
   display: flex;

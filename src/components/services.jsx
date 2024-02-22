@@ -132,7 +132,7 @@ const servicesMapComponent = {
 const Services = forwardRef((props, ref) => {
   const { contactRef } = props;
   const [work, setWork] = useState(data[0]);
-  const [isVisible, setIsVisible] = useState(false); // Add this line
+  const [isVisible, setIsVisible] = useState(true); // Add this line
   const WorkComponent = servicesMapComponent[work];
   const workRef = useRef(null);
 
