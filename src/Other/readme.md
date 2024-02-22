@@ -11,6 +11,9 @@
 6. npm install -g gltf-pipeline --> gltf-pipeline -i scene.gltf -o console.gltf -d --> npx gltfjsx console.gltf --transform
 7. npm install three @react-three/fiber @react-three/drei
 
+//for animations
+8. npm install react-spring
+
 
 //TO DO:
 2. Dopieścić 
