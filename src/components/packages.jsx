@@ -151,11 +151,13 @@ const packagesMapComponent = {
 const Packages = forwardRef((props, ref) => {
   const { contactRef } = props;
   const [work, setWork] = useState(data[0]);
+  const [isVisible, setIsVisible] = useState(true); // Add this line
   const WorkComponent = packagesMapComponent[work];
   const workRef = useRef(null);
 
   const handleListItemClick = (item) => {
     setWork(item);
+    setIsVisible(true);
     if (window.innerWidth <= 1023) {
       workRef.current.scrollIntoView({ behavior: 'smooth' });
     }
@@ -167,7 +169,7 @@ const Packages = forwardRef((props, ref) => {
       <Container>
         <Left ref={workRef}>
           <CanvasBlob />
-          <WorkComponent contactRef={contactRef} />
+          <WorkComponent contactRef={contactRef} isVisible={isVisible} setIsVisible={setIsVisible} />
         </Left>
         <Right>
           <List>

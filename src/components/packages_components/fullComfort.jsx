@@ -7,16 +7,24 @@ import {
   Title,
   Subtitle,
 } from "../styled_components/workComponentServicesStyledComponents";
+import { useSpring, animated, config } from "react-spring";
 
-const fullComfort = ({ contactRef }) => {
+const fullComfort = ({ contactRef, isVisible }) => {
   const scrollToContact = () => {
     if (contactRef && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  const fadeInAnimation = useSpring({
+    opacity: isVisible ? 1 : 0,
+    from: { opacity: 0 },
+    config: { duration: 1000}, 
+  });
+
+
   return (
-    <WorkComponentContainer>
+    <WorkComponentContainer style={fadeInAnimation}>
       <KeyPointsContainer>
         <KeyPointColumn>
           <Title>Kompletna Witryna</Title>
