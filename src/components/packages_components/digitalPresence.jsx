@@ -51,8 +51,9 @@ const digitalPresence = ({ contactRef }) => {
 
         <Button onClick={() => scrollToContact(contactRef)}>
           Porozmawiajmy
-        </Button>
-      </KeyPointsContainer>{" "}
+          {/* Porozmawiajmy Porównaj pakiety treść buttona */}
+        </Button> 
+      </KeyPointsContainer>
     </WorkComponentContainer>
   );
 };
