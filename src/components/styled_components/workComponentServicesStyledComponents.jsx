@@ -1,7 +1,7 @@
 import { pulseAnimation, moveUpAndDownAnimation } from "./animations";
 import styled, { keyframes } from "styled-components";
 
-export const WorkComponentContainer = styled.div`
+export const WorkComponentContainer = styled(animated.div)`
   display: flex;
   position: relative;
   width: 100%;

@@ -8,17 +8,27 @@ import {
   Subtitle,
 } from "../styled_components/workComponentServicesStyledComponents";
 
-const StronyInternetowe = ({ contactRef }) => {
+// Import statements at the top of your file
+import { useState } from "react";
+import { useSpring, animated, config } from "react-spring";
+import styled from "styled-components";
+
+const StronyInternetowe = ({ contactRef, isVisible }) => {
   const scrollToContact = () => {
     if (contactRef && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  return (
-    <WorkComponentContainer>
-      <KeyPointsContainer>
+  const fadeInAnimation = useSpring({
+    opacity: isVisible ? 1 : 0,
+    from: { opacity: 0 },
+    config: { duration: 1000}, // Adjust the duration as needed (in milliseconds)
+  });
 
+  return (
+    <WorkComponentContainer style={fadeInAnimation}>
+      <KeyPointsContainer>
         <KeyPointColumn>
           <Title>Projekt </Title>
           <Subtitle>
@@ -52,7 +62,6 @@ const StronyInternetowe = ({ contactRef }) => {
         <Button onClick={() => scrollToContact(contactRef)}>
           Porozmawiajmy
         </Button>
-
       </KeyPointsContainer>
     </WorkComponentContainer>
   );
